@@ -30,7 +30,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"obstacle",
+    "path":"sprites/obstacle/obstacle.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

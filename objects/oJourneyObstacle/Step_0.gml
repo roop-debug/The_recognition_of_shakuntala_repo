@@ -1,6 +1,10 @@
-y += moveSpeed;
+x = xstart;
+if(!global.gamePaused)
+{
+    y += speed;
+}
 
-if(y > RESOLUTION_H + 64)
+if(y > RESOLUTION_H + 32)
 {
     instance_destroy();
 }
