@@ -13,7 +13,9 @@
     {"name":"oarrow","order":10,"path":"objects/oarrow/oarrow.yy",},
     {"name":"oascetic","order":7,"path":"objects/oascetic/oascetic.yy",},
     {"name":"oCameraController","order":17,"path":"objects/oCameraController/oCameraController.yy",},
-    {"name":"oDialogueController","order":16,"path":"objects/oDialogueController/oDialogueController.yy",},
+    
+    {"name":"odeer_trigger","order":16,"path":"objects/odeer_trigger/odeer_trigger.yy",},
+    {"name":"odeer","order":15,"path":"objects/odeer/odeer.yy",},
     {"name":"oGame","order":1,"path":"objects/oGame/oGame.yy",},
     {"name":"oJourneyObstacle","order":13,"path":"objects/oJourneyObstacle/oJourneyObstacle.yy",},
     {"name":"oJourneyRiver","order":15,"path":"objects/oJourneyRiver/oJourneyRiver.yy",},
@@ -40,6 +42,7 @@
     {"name":"boar","order":13,"path":"sprites/boar/boar.yy",},
     {"name":"chariotattack","order":3,"path":"sprites/chariotattack/chariotattack.yy",},
     {"name":"chariotplayer","order":1,"path":"sprites/chariotplayer/chariotplayer.yy",},
+    {"name":"deer","order":16,"path":"sprites/deer/deer.yy",},
     {"name":"dushyantaarmedmove","order":8,"path":"sprites/dushyantaarmedmove/dushyantaarmedmove.yy",},
     {"name":"dushyantaarmedplayer","order":7,"path":"sprites/dushyantaarmedplayer/dushyantaarmedplayer.yy",},
     {"name":"dushyantaunarmedmove","order":10,"path":"sprites/dushyantaunarmedmove/dushyantaunarmedmove.yy",},
