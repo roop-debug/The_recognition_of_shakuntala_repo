@@ -30,8 +30,8 @@ function playerstatejourney()
         ringLost = true;
         riverRealizationTimer = 0;
 
-        spriterun = dushyantaunarmedmove;
-        spriteidle = dushyantaarmedplayer;
+        spriterun = shakuntalamoving;
+        spriteidle = shakuntalaplayer;
     }
 
 

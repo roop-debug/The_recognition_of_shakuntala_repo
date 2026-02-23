@@ -32,8 +32,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"dushyantaunarmedplayer",
-    "path":"sprites/dushyantaunarmedplayer/dushyantaunarmedplayer.yy",
+    "name":"shakuntalaplayer",
+    "path":"sprites/shakuntalaplayer/shakuntalaplayer.yy",
   },
   "spriteMaskId":null,
   "visible":true,

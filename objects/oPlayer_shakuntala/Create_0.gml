@@ -8,8 +8,8 @@ vSpeed = 0;
 
 speedWalk = 2;
 
-spriterun = dushyantaarmedmove;
-spriteidle = dushyantaarmedplayer;
+spriterun = shakuntalamoving;
+spriteidle = shakuntalaplayer;
 spritehit = chariotattack;
 
 localFrame = 0;

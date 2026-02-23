@@ -1,0 +1,1 @@
+scr_move_to_points(points, 3);
