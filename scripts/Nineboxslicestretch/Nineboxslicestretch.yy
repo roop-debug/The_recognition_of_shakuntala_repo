@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"Nineboxslicestretch",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Nineboxslicestretch",
+  "parent":{
+    "name":"scripts",
+    "path":"folders/scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
