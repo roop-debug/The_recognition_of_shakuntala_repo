@@ -6,6 +6,11 @@ function dialogueresponses(){
         case "complywithascetic": 
         {
             newtextbox("yay",0,["1:bruh"],true);
+    
+
+    
+    
         }
+            
     }
 }
