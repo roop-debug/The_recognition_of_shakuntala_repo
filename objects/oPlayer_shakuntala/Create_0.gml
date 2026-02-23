@@ -1,11 +1,23 @@
-collisionmap = layer_tilemap_get_id(layer_get_id("col"));
+state = playerstatejourney;
+laststate = state;
 
 image_speed = 0;
 
 hSpeed = 0;
-moveSpeed = 4;
+vSpeed = 0;
 
-lives = 2;
-invincibleTimer = 0;
+speedWalk = 2;
 
-gameOver = false;
+spriterun = dushyantaarmedmove;
+spriteidle = dushyantaarmedplayer;
+spritehit = chariotattack;
+
+localFrame = 0;
+
+lives1 = 2;
+
+riverHit = false;
+ringLost = false;
+
+riverRealizationTimer = 0;
+riverRealizationDelay = room_speed * 5;
