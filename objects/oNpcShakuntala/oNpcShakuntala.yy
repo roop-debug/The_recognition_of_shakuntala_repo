@@ -6,10 +6,13 @@
   "name":"oNpcShakuntala",
   "overriddenProperties":[],
   "parent":{
-    "name":"The recognition of sakuntala",
-    "path":"The recognition of sakuntala.yyp",
+    "name":"object",
+    "path":"folders/object.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"p_entity",
+    "path":"objects/p_entity/p_entity.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

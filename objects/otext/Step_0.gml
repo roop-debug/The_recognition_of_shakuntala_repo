@@ -1,7 +1,6 @@
-lerPprogress+= (1-lerPprogress)/50;
 textProgress += global.textspeed;
-lerp(x1,x1target,lerPprogress);
-lerp(x2,x2target,lerPprogress);
+x1 = lerp(x1,x1target,lerPprogress);
+x2 = lerp(x2,x2target,lerPprogress);
 //cycle responses
  keyUp=keyboard_check_pressed(vk_up) or keyboard_check_pressed(ord("W"));
  keyDown=keyboard_check_pressed(vk_down) or keyboard_check_pressed(ord("S"));
@@ -24,8 +23,8 @@ if(keyboard_check_pressed(vk_space)){
                 
         }
         else{
-            with(oPlayer_firsthalf) state = laststate;
-        }
+        with(oPlayer_firsthalf) state = laststate;
+    }
     }
     else{
         if(textProgress>2){

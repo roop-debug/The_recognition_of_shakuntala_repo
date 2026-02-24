@@ -18,5 +18,5 @@ if(responses[0]!=-1 && textProgress>=string_length(message)){
     
 }
 draw_text((x1+x2)/2,y1+8,_print);
-draw_set_colour(c_white);
+draw_set_colour(c_black);
 draw_text((x1+x2)/2,y1+7,_print);

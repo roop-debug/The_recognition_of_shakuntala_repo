@@ -13,7 +13,7 @@ function newtextbox(){
          }
        else _obj = otext;
      with(instance_create_layer(0,0,"instances",_obj)){
-        _obj.message=argument[0]
+        message=argument[0]
         
    
     if (instance_exists(other))origininstance = other.id; else origininstance=noone;
