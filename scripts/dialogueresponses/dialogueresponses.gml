@@ -81,12 +81,12 @@ function dialogueresponses(){
             newtextbox("Vidushakha:Clear air does not trouble sleep, my friend. ",0,["res1:Return for protection.","res1:Return for her.","res1:Return under official pretext."],true);
         
         }break;
-            case "vidu1":{
+            case "vidu2":{
             newtextbox("King Dushyanta:I returned altered.\nSomething in that hermitage unsettled me. ");
             newtextbox("Vidushakha:. Unsettled or ...enchanted",0,["res1:Return for protection.","res1:Return for her.","res1:Return under official pretext."],true);
             
         }break;
-        case "vidu1":{
+        case "vidu3":{
             newtextbox("King Dushyanta:I met one whose presence commands thought.\nI cannot dismiss it. ");
             newtextbox("Vidushakha:Then your cure lies not in court, but forest.",0,["res1:Return for protection.","res1:Return for her.","res1:Return under official pretext."],true);
             
