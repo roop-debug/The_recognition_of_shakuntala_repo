@@ -35,7 +35,7 @@ function dialogueresponses(){
             newtextbox("King Dushyanta: Fear Not, Even a small threat deserves protection. Thee bee is gone");
             newtextbox("Shakuntala:A king? Here? \n We did not know we were being observed");
             newtextbox("Anasuya(bowing):Forgive our informality your majesty");
-            messenger.path= [[x+32,y],[x+32,y]]
+            messenger.path= [[x+64,y],[x+64,y]]
             
         }
             break;
@@ -43,7 +43,7 @@ function dialogueresponses(){
             newtextbox("King Dushyanta:Forgive the intrusion.\n\nI could not ignore distress, however small.\nThe bee will trouble you no longer.");
             newtextbox("Shakuntala: You show kindness beyond neccessity");
             newtextbox("Priyamvada:And she blushes beyond explanation")
-            messenger.path= [[x+32,y],[x+32,y]]
+            messenger.path= [[x+64,y],[x+64,y]]
         }
             break;
         case "beereveal3":{
@@ -51,9 +51,31 @@ function dialogueresponses(){
             newtextbox("Shakuntala: You meant no harm?");
             newtextbox("King Dushyanta:None. I was struck by the peace here.");
             newtextbox("Anasuya:Then peace has found you as well.");
-            messenger.path= [[x+32,y],[x+32,y]]
+            messenger.path= [[x+64,y],[x+64,y]]
+        }
+            
+            break;
+        
+        case "duty1":{
+            newtextbox("King Dushyanta: A king belongs first to his people.\nI will return immediately.");
+            newtextbox("Shakuntala:So swiftly?");
+            newtextbox("Priyamvada:Duty is a stern rival");
+            room_goto(rcourt);
+            }   
+            break;
+        case "duty2":{
+            newtextbox("King Dushyanta:The summons comes too soon.\nYet I cannot deny obligation.");
+            newtextbox("Anasuya :His words leave , his thoughts remain.");
+            room_goto(rcourt);
         }
             break;
-    }
+        case "duty3":{
+            newtextbox("King Dushyanta:Inform the council I return at once.");
+            newtextbox("Shakuntala :Will he remember this grove?");
+            room_goto(rcourt);
+        }
+            break;
         
-}         
+        
+}  
+}       
