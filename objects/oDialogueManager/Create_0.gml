@@ -14,18 +14,23 @@ global.dialogue = {};
 
 // ─── HUNTING ───────────────────────────────────────────────
 global.dialogue[$ "hunting_start"] = [
-{
-    speaker: "Ascetic",
-    text: "Stop, O King!\nThis creature lives under our protection.\nThe hermitage shelters the harmless.\nLay down your weapon in this sacred ground.",
-    bg: 0,
-    audio: AsceticAct1D1,
-    responses: [
-    { label: "Lower the bow at once.", next: "hunting1" },
-    { label: "Assert that hunting is a king’s discipline.", next: "hunting2" },
-    { label: "Ask why the forest is under protection.", next: "hunting3" }
-    ]
-}
-]
+    {
+        speaker: "Ascetic",
+        text: "Stop, O King!\nThis creature lives under our protection.",
+        bg: 0,
+        audio: AsceticAct1D1
+    },
+    {
+        speaker: "Ascetic",
+        text: "The hermitage shelters the harmless.\nLay down your weapon in this sacred ground.",
+        bg: 0,
+        responses: [
+            { label: "Lower the bow at once.", next: "hunting1" },
+            { label: "Assert that hunting is a king's discipline.", next: "hunting2" },
+            { label: "Ask why the forest is under protection.", next: "hunting3" }
+        ]
+    }
+];
 global.dialogue[$ "hunting1"] = [
     { speaker: "King Dushyanta", text: "You speak rightly.\nI will not disturb what seeks sanctuary.\nMy arrow returns to rest.", bg: 0, audio: Hunting_scene_1 },
     { speaker: "Ascetic",        text: "Your restraint honors your crown.\nPower governed by dharma is true kingship.", bg: 0, audio: AsceticAct1D2,

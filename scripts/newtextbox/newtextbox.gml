@@ -35,8 +35,8 @@ function newtextbox(){
             responsescript = [-1];
         }
     }
-    
-    with (oPlayer_firsthalf) {
+    var _player = instance_exists(oPlayer_firsthalf) ? oPlayer_firsthalf : oPlayer_secondhalfnpc;
+    with (_player) {
         if (state != playerstatelocked) {
             laststate = state;
             state = playerstatelocked;

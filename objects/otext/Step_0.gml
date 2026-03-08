@@ -32,6 +32,10 @@ if (keyboard_check_pressed(vk_space)) {
     var _messagelength = string_length(message);
     if (textProgress >= _messagelength) {
         if (responses[0] != -1) {
+            if (!responseBoxReady) {
+                responseBoxReady = true;
+                exit;
+            }
             if (instance_exists(oDialogueManager)) oDialogueManager.isActive = false;
             with (oDialogueManager) branch(other.responsescript[other.responseselected]);
             instance_destroy();

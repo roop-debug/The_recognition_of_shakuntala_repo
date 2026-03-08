@@ -6,7 +6,8 @@ function startDialogue(key) {
     }
     activeChainKey = key;
     isActive = true;
-    with (oPlayer_firsthalf) {
+    var _player = instance_exists(oPlayer_firsthalf) ? oPlayer_firsthalf : oPlayer_secondhalfnpc;
+    with (_player) {
         if (state != playerstatelocked) {
             laststate = state;
             state = playerstatelocked;
@@ -47,7 +48,8 @@ function endDialogue() {
         audio_stop_sound(activDialogueSound);
         activDialogueSound = -1;
     }
-    with (oPlayer_firsthalf) {
+    var _player = instance_exists(oPlayer_firsthalf) ? oPlayer_firsthalf : oPlayer_secondhalfnpc;
+    with (_player) {
         state = laststate;
     }
     if (pendingEndCallback != "") {
