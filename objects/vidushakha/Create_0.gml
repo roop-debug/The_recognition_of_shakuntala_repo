@@ -1,4 +1,6 @@
-image_speed=0;
-
-state=playerstatefree;
-path=[[x+16,y],[x+16,y]];
+image_speed = 0;
+path = [];
+vidushakaSpeed = 1.5;
+vidushakaState = "idle"; // idle > walkin > dialogue > done
+targetX = 0;
+targetY = 0;

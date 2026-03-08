@@ -1,21 +1,18 @@
 {
   "$GMObject":"",
-  "%Name":"vidushakha",
+  "%Name":"oareatrigger_beescene",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"vidushakha",
+  "name":"oareatrigger_beescene",
   "overriddenProperties":[],
   "parent":{
     "name":"object",
     "path":"folders/object.yy",
   },
-  "parentObjectId":{
-    "name":"messenger",
-    "path":"objects/messenger/messenger.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -33,10 +30,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"vidushakhanpc",
-    "path":"sprites/vidushakhanpc/vidushakhanpc.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

@@ -2,7 +2,7 @@
 // Persistent object - place once in your first room
 show_debug_message("audio asset id: " + string(Hunting_scene_1));
 global.DM = id;
-
+forestVisitCount = 0;
 activeChainKey = "";
 // Add this line to oDialogueManager Create event alongside the others
 pendingEndCallback = "";
@@ -101,6 +101,16 @@ global.dialogue[$ "beereveal3"] = [
 ];
 
 // ─── DUTY / DEPARTURE ──────────────────────────────────────
+global.dialogue[$ "messenger_entry"] = [
+{
+    speaker: "Messenger",
+    text: "Your Majesty, the council awaits.\nMatters of state cannot proceed without you.",
+    bg: 0,
+    audio: MessengerACT1D1,
+    responses: [{label: "Duty must prevail", next: "duty1"}, {label: "Express reluctance", next: "duty2"}, {label: "Conceal your emotions", next: "duty3"}]
+}
+];
+
 global.dialogue[$ "duty1"] = [
     { speaker: "King Dushyanta", text: "A king belongs first to his people.\nI will return immediately.", bg: 0, audio:Npc_calls_him_back_1 },
     { speaker: "Shakuntala",     text: "So swiftly?", bg: 0, audio:shakuntala_act1_no5 },
@@ -142,8 +152,8 @@ global.dialogue[$ "vidu3"] = [
 ];
 
 global.dialogue[$ "res1"] = [
-    { speaker: "Vidushaka", text: "Ah... so duty walks in now.", bg: 0, audio:VidusakaAct1D5 },
-    { speaker: "",          text: "Press T to return to the forest.", bg: 0 }
+    { speaker: "Vidushaka", text: "Ah! So duty now walks in two directions.", bg: 0, audio:VidusakaAct1D5  },
+    { speaker: "",          text: "Press T to return to the forest.", bg: 0, onEnd: "fadeToForest" }
 ];
 
 // ─── SHAKUNTALA MONOLOGUE ───────────────────────────────────

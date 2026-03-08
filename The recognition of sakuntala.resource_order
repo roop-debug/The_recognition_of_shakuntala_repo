@@ -13,6 +13,7 @@
     {"name":"bear","order":12,"path":"objects/bear/bear.yy",},
     {"name":"messenger","order":27,"path":"objects/messenger/messenger.yy",},
     {"name":"oareatrigger_1","order":25,"path":"objects/oareatrigger_1/oareatrigger_1.yy",},
+    {"name":"oareatrigger_beescene","order":29,"path":"objects/oareatrigger_beescene/oareatrigger_beescene.yy",},
     {"name":"oareatrigger","order":5,"path":"objects/oareatrigger/oareatrigger.yy",},
     {"name":"oarrow","order":11,"path":"objects/oarrow/oarrow.yy",},
     {"name":"oascetic","order":8,"path":"objects/oascetic/oascetic.yy",},
