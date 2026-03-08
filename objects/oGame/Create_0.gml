@@ -7,4 +7,6 @@ display_set_gui_size(RESOLUTION_W,RESOLUTION_H)
 room_goto(ROOMSTART);
 object_set_visible(oareatrigger,false)
 global.textqueue = 0;
-
+// Spawn point globals — set before room_goto to control where player appears
+global.spawnX = -1; // -1 = use room editor position
+global.spawnY = -1;

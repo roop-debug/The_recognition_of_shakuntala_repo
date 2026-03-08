@@ -20,7 +20,12 @@ switch (messengerState) {
             var _dir = point_direction(x, y, targetX, targetY);
             x += lengthdir_x(messengerSpeed, _dir);
             y += lengthdir_y(messengerSpeed, _dir);
+            direction    = _dir;
+            sprite_index = spriterun;
+            animatenpc();
         } else {
+            sprite_index = spriteidle;
+            animatenpc();
             messengerState = "dialogue";
             with (oDialogueManager) startDialogue("messenger_entry");
         }
@@ -41,12 +46,17 @@ switch (messengerState) {
             var _dir = point_direction(x, y, exitX, exitY);
             x += lengthdir_x(messengerSpeed, _dir);
             y += lengthdir_y(messengerSpeed, _dir);
+            direction    = _dir;
+            sprite_index = spriterun;
+            animatenpc();
         } else {
             messengerState = "done";
         }
         break;
         
     case "done":
+        global.spawnX = oPlayer_firsthalf.x;
+        global.spawnY = oPlayer_firsthalf.y;
         room_goto(rcourt);
         break;
 }

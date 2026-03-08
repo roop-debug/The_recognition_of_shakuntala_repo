@@ -19,7 +19,12 @@ switch (vidushakaState) {
             var _dir = point_direction(x, y, targetX, targetY);
             x += lengthdir_x(vidushakaSpeed, _dir);
             y += lengthdir_y(vidushakaSpeed, _dir);
+            direction    = _dir;
+            sprite_index = spriterun;
+            animatenpc();
         } else {
+            sprite_index = spriteidle;
+            animatenpc();
             vidushakaState = "dialogue";
             with (oDialogueManager) startDialogue("court1");
         }

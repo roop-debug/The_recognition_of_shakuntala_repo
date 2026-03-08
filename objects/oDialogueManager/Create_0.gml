@@ -8,6 +8,7 @@ activeChainKey = "";
 pendingEndCallback = "";
 activDialogueSound = -1;
 isActive = false;
+unlockPlayerTimer = 0;
 
 // Build all dialogue data
 global.dialogue = {};
@@ -164,6 +165,7 @@ global.dialogue[$ "shakmon_entry"] = [
     bg: 0,
     audio: Return_to_hermitage,
     responses: [{label: "..." , next: "shakmon" }]
+    
 }
 ];
 global.dialogue[$ "shakmon"] = [
@@ -238,7 +240,120 @@ global.dialogue[$ "mar"] = [
         speaker: "Priyamvada & Anasuya", 
         text: "The forest itself consents.", 
         bg: 0,
-        audio: Anasuya_priyamvadaACT1D1
+        audio: Anasuya_priyamvadaACT1D1,
+        onEnd: "walkInFriends"
+    }
+];
+
+// ─── GANDHARVA MARRIAGE ────────────────────────────────────
+global.dialogue[$ "gandharva"] = [
+    {
+        speaker: "Dushyanta",
+        text: "This vow is ours, freely given.",
+        bg: 0,
+        audio: Gandharva_marriage_1
+    },
+    {
+        speaker: "Shakuntala",
+        text: "Then let the forest remember what we declare.",
+        bg: 0
+    },
+    {
+        speaker: "Dushyanta",
+        text: "This ring bears my seal.\nShould doubt arise, it will speak for me.",
+        bg: 0
+    },
+    {
+        speaker: "Priyamvada",
+        text: "A token binds memory to promise.",
+        bg: 0,
+        audio: Gandharva_marriage_2,
+        onEnd: "triggerDeparture"
+    }
+];
+
+// ─── DUSHYANTA LEAVES ──────────────────────────────────────
+global.dialogue[$ "departure"] = [
+    {
+        speaker: "",
+        text: "You must now part ways.\nHow do you take your leave?",
+        bg: 0,
+        responses: [
+            { label: "Promise swift return.",  next: "depart1" },
+            { label: "Speak solemnly.",        next: "depart2" },
+            { label: "Speak confidently.",     next: "depart3" }
+        ]
+    }
+];
+
+global.dialogue[$ "depart1"] = [
+    {
+        speaker: "King Dushyanta",
+        text: "I will send for you soon.\nTrust my word.",
+        bg: 0
+    },
+    {
+        speaker: "Shakuntala",
+        text: "I will hold to that promise.\nYet the forest will feel empty without you.\nDo not let memory fade where affection has taken root.",
+        bg: 0,
+        audio: shakuntala_act1_no11,
+        onEnd: "kingDeparts"
+    }
+];
+
+global.dialogue[$ "depart2"] = [
+    {
+        speaker: "King Dushyanta",
+        text: "Time may intervene — but not intention.",
+        bg: 0
+    },
+    {
+        speaker: "Shakuntala",
+        text: "I understand the burden you carry.\nStill, time can change even what feels certain.\nLet your intention remain stronger than absence.",
+        bg: 0,
+        onEnd: "kingDeparts"
+    }
+];
+
+global.dialogue[$ "depart3"] = [
+    {
+        speaker: "King Dushyanta",
+        text: "What we begin here will endure beyond distance.",
+        bg: 0
+    },
+    {
+        speaker: "Shakuntala",
+        text: "Your confidence gives me strength.\nYet I am new to such partings.\nReturn before longing grows too heavy.",
+        bg: 0,
+        onEnd: "kingDeparts"
+    }
+];
+
+// ─── DURVASA CURSE ─────────────────────────────────────────
+global.dialogue[$ "durvasa_curse"] = [
+    {
+        speaker: "Durvasa",
+        text: "I stand before you, yet receive no greeting?",
+        bg: 0,
+        audio: DurvasaACT1D1
+    },
+    {
+        speaker: "Durvasa",
+        text: "Since you think only of another,\nthat man shall forget you entirely!",
+        bg: 0,
+        audio: DurvasaACT1D2
+    },
+    {
+        speaker: "Anasuya",
+        text: "Holy sir, she is newly married!",
+        bg: 0
+    },
+    {
+        speaker: "Durvasa",
+        text: "A token from him may restore remembrance.\nBut until then — oblivion.",
+        bg: 0,
+        audio: DurvasaACT1D3,
+        onEnd: "act1End"
     }
 ];
 
@@ -256,3 +371,4 @@ global.dialogue[$ "court1"] = [
         onEnd: ""
     }
 ];
+

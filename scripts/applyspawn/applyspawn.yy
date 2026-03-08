@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"applyspawn",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"applyspawn",
+  "parent":{
+    "name":"scripts",
+    "path":"folders/scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

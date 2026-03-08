@@ -66,7 +66,46 @@ function handleEndCallback(flag) {
         case "fadeToForest":
             with (vidushakha) { vidushakaState = "done"; }
             forestVisitCount++;
+            if (instance_exists(oPlayer_secondhalfnpc)) {
+                global.spawnX = oPlayer_secondhalfnpc.x;
+                global.spawnY = oPlayer_secondhalfnpc.y;
+            }
             room_goto(rjungleact1);
-         break;
+            break;
+
+        // ── Scene 8: Anasuya + Priyamvada walk in after mar ──
+        case "walkInFriends":
+            // Set targets near Shakuntala
+            var _sx = instance_exists(shakuntalanpc) ? shakuntalanpc.x : room_width / 2;
+            var _sy = instance_exists(shakuntalanpc) ? shakuntalanpc.y : room_height / 2;
+            with (anasuya)    { targetX = _sx - 20; targetY = _sy + 8;  npcState = "walkin"; }
+            with (priyamvada) { targetX = _sx + 20; targetY = _sy + 8;  npcState = "walkin"; }
+            // After friends arrive, trigger gandharva marriage dialogue
+            // Short delay then fire — handled by a flag
+            oDialogueManager.friendsWalkTimer = room_speed * 2;
+            break;
+
+        // ── Scene 9: Departure ────────────────────────────────
+        case "triggerDeparture":
+            with (oDialogueManager) startDialogue("departure");
+            break;
+
+        case "kingDeparts":
+            // Lock player, hide King, trigger Durvasa entrance
+            with (oPlayer_firsthalf) {
+                state        = playerstatelocked;
+                visible      = false;
+            }
+            with (durvasanpc) { npcState = "walkin"; }
+            break;
+
+        // ── Scene 10: End of Act 1 ───────────────────────────
+        case "act1End":
+            // Lock everyone — act is over
+            with (oPlayer_firsthalf) { state = playerstatelocked; }
+            with (durvasanpc)        { npcState = "done"; }
+            // Transition to Act 2 when ready:
+            // room_goto(rjungleact2);
+            break;
     }
 }

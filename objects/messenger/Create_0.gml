@@ -11,3 +11,6 @@ targetX = 0;
 targetY = 0;
 exitX = room_width;
 exitY = 0;
+spriteidle = npc;
+spriterun  = npcMoving;
+localFrame = 0;

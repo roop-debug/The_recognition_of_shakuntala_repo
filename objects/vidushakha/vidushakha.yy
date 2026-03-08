@@ -12,10 +12,7 @@
     "name":"object",
     "path":"folders/object.yy",
   },
-  "parentObjectId":{
-    "name":"messenger",
-    "path":"objects/messenger/messenger.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

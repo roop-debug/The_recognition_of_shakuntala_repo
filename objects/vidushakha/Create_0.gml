@@ -1,6 +1,9 @@
 image_speed = 0;
 path = [];
-vidushakaSpeed = 1.5;
+vidushakaSpeed = 1;
 vidushakaState = "idle"; // idle > walkin > dialogue > done
 targetX = 0;
 targetY = 0;
+spriteidle = vidushakhanpc;
+spriterun  = vidushakhamove;
+localFrame = 0;

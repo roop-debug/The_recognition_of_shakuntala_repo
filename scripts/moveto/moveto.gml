@@ -9,16 +9,15 @@ function scr_move_to_points(_points, _speed)
     }
 
     // Stop if finished
+    // Stop if finished
     if (point_index >= array_length(_points))
     {
-        // Switch to idle when done
-        if (sprite_index != npc)
+        if (sprite_index != spriteidle)
         {
-            sprite_index =npc;
+            sprite_index = spriteidle;
             localFrame = 0;
         }
-
-        animatesprite();
+        animatenpc();
         return;
     }
 
@@ -69,24 +68,20 @@ function scr_move_to_points(_points, _speed)
 
     if (moving)
     {
-        if (sprite_index != npcMoving)
+        if (sprite_index != spriterun)
         {
-            sprite_index = npcMoving;
+            sprite_index = spriterun;
             localFrame = 0;
         }
     }
     else
     {
-        if (sprite_index != npc)
+        if (sprite_index != spriteidle)
         {
-            sprite_index = npc;
+            sprite_index = spriteidle;
             localFrame = 0;
         }
     }
 
-    // ---------------------------------
-    // RUN YOUR ANIMATION SYSTEM
-    // ---------------------------------
-
-    animatesprite();
+    animatenpc();
 }
