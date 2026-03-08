@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"shakuntala_act2_no19",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":6.42,
+  "exportDir":"",
+  "name":"shakuntala_act2_no19",
+  "parent":{
+    "name":"audio",
+    "path":"folders/audio.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"shakuntala_act2_no19.mp3",
+  "volume":1.0,
+}

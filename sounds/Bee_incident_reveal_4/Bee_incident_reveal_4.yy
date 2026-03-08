@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"Bee_incident_reveal_4",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":4.5866666,
+  "exportDir":"",
+  "name":"Bee_incident_reveal_4",
+  "parent":{
+    "name":"audio",
+    "path":"folders/audio.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"Bee_incident_reveal_4.mp3",
+  "volume":1.0,
+}

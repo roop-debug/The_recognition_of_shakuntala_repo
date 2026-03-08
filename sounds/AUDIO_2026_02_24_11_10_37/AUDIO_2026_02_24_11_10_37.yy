@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"AUDIO_2026_02_24_11_10_37",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":13.212154,
+  "exportDir":"",
+  "name":"AUDIO_2026_02_24_11_10_37",
+  "parent":{
+    "name":"audio",
+    "path":"folders/audio.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"AUDIO_2026_02_24_11_10_37.mp3",
+  "volume":1.0,
+}

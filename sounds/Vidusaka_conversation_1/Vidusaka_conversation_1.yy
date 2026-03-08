@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"Vidusaka_conversation_1",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":4.5653515,
+  "exportDir":"",
+  "name":"Vidusaka_conversation_1",
+  "parent":{
+    "name":"audio",
+    "path":"folders/audio.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"Vidusaka_conversation_1.mp3",
+  "volume":1.0,
+}
