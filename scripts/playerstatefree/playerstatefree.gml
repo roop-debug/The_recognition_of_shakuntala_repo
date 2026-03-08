@@ -26,6 +26,8 @@ if(_oldsprite!= sprite_index){
 //animate sprite
      animatesprite();
     if(keyInteract){
+        show_debug_message("isActive: " + string(oDialogueManager.isActive));
+        if (instance_exists(oDialogueManager) && oDialogueManager.isActive) exit;
     var _activatex = lengthdir_x(24, direction);
     var _activatey = lengthdir_y(24, direction);
     
@@ -50,7 +52,7 @@ if(_oldsprite!= sprite_index){
    
 }
 
-if(keyAttack && oPlayer_firsthalf.attackCooldown== 0){
+if(keyAttack && instance_exists(oPlayer_firsthalf) && oPlayer_firsthalf.attackCooldown== 0){
     state=playerstateattack ;
     attackcooldown=20;
 }

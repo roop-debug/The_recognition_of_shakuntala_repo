@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"Hunting_scene_3__ii_",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":3.84,
+  "exportDir":"",
+  "name":"Hunting_scene_3__ii_",
+  "parent":{
+    "name":"audio",
+    "path":"folders/audio.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"Hunting_scene_3__ii_.mp3",
+  "volume":1.0,
+}

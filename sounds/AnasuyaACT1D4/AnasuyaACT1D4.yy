@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"AnasuyaACT1D4",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":3.9666667,
+  "exportDir":"",
+  "name":"AnasuyaACT1D4",
+  "parent":{
+    "name":"audio",
+    "path":"folders/audio.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"AnasuyaACT1D4.mp3",
+  "volume":1.0,
+}

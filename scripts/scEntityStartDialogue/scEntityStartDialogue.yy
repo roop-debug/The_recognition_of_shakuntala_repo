@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scEntityStartDialogue",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scEntityStartDialogue",
+  "parent":{
+    "name":"scripts",
+    "path":"folders/scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

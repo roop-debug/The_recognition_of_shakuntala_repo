@@ -13,3 +13,10 @@ textProgress = 0;
 background = 1
 
 responseselected =0;
+
+// Add to otext Create event
+if (!variable_instance_exists(id, "responses")) responses = [-1];
+if (!variable_instance_exists(id, "responsescript")) responsescript = [-1];
+if (!variable_instance_exists(id, "responseselected")) responseselected = 0;
+if (!variable_instance_exists(id, "message")) message = "";
+if (!variable_instance_exists(id, "audioPlayed")) audioPlayed = false;
