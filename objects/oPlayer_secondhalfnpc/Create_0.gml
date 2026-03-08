@@ -10,3 +10,4 @@ spriteidle=dushyantaunarmedplayer;
 spriteattack= dushyantaunarmedmove;
 localFrame = 0;
 attackCooldown = 0;
+canMove = true;

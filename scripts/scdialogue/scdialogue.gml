@@ -63,5 +63,10 @@ function handleEndCallback(flag) {
         case "hideAscetic":
             if (instance_exists(oascetic)) oascetic.visible = false;
             break;
+        case "fadeToForest":
+            with (vidushakha) { vidushakaState = "done"; }
+            forestVisitCount++;
+            room_goto(rjungleact1);
+         break;
     }
 }

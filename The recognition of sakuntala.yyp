@@ -73,6 +73,7 @@
     {"id":{"name":"bear","path":"objects/bear/bear.yy",},},
     {"id":{"name":"messenger","path":"objects/messenger/messenger.yy",},},
     {"id":{"name":"oareatrigger_1","path":"objects/oareatrigger_1/oareatrigger_1.yy",},},
+    {"id":{"name":"oareatrigger_beescene","path":"objects/oareatrigger_beescene/oareatrigger_beescene.yy",},},
     {"id":{"name":"oareatrigger","path":"objects/oareatrigger/oareatrigger.yy",},},
     {"id":{"name":"oarrow","path":"objects/oarrow/oarrow.yy",},},
     {"id":{"name":"oascetic","path":"objects/oascetic/oascetic.yy",},},
