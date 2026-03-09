@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"chariotplayer",
-    "path":"sprites/chariotplayer/chariotplayer.yy",
+    "name":"dushyantaunarmedplayer",
+    "path":"sprites/dushyantaunarmedplayer/dushyantaunarmedplayer.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -6,22 +6,24 @@ function startDialogue(key) {
     }
     activeChainKey = key;
     isActive = true;
-    var _player = instance_exists(oPlayer_firsthalf) ? oPlayer_firsthalf : oPlayer_secondhalfnpc;
+
+    var _player = instance_exists(oPlayer_firsthalf_1) ? oPlayer_firsthalf_1
+                : (instance_exists(oPlayer_firsthalf)  ? oPlayer_firsthalf
+                :  oPlayer_secondhalfnpc);
     with (_player) {
         if (state != playerstatelocked) {
             laststate = state;
             state = playerstatelocked;
         }
     }
+
     var _len = array_length(_chain);
     for (var i = 0; i < _len; i++) {
-        var _node = _chain[i];
-        var _text = (_node.speaker != "")
-            ? _node.speaker + ": " + _node.text
-            : _node.text;
-        var _bg        = _node[$ "bg"] ?? 0;
+        var _node      = _chain[i];
+        var _text      = (_node.speaker != "") ? _node.speaker + ": " + _node.text : _node.text;
+        var _bg        = _node[$ "bg"]        ?? 0;
         var _responses = _node[$ "responses"] ?? undefined;
-        var _audio = _node[$ "audio"] ?? -1;
+        var _audio     = _node[$ "audio"]     ?? -1;
         if (!is_undefined(_responses)) {
             var _rArr = [];
             for (var r = 0; r < array_length(_responses); r++) {
@@ -48,10 +50,12 @@ function endDialogue() {
         audio_stop_sound(activDialogueSound);
         activDialogueSound = -1;
     }
-    var _player = instance_exists(oPlayer_firsthalf) ? oPlayer_firsthalf : oPlayer_secondhalfnpc;
-    with (_player) {
-        state = laststate;
-    }
+
+    var _player = instance_exists(oPlayer_firsthalf_1) ? oPlayer_firsthalf_1
+                : (instance_exists(oPlayer_firsthalf)  ? oPlayer_firsthalf
+                :  oPlayer_secondhalfnpc);
+    with (_player) { state = laststate; }
+
     if (pendingEndCallback != "") {
         handleEndCallback(pendingEndCallback);
         pendingEndCallback = "";
@@ -60,52 +64,43 @@ function endDialogue() {
 
 function handleEndCallback(flag) {
     switch (flag) {
+
         case "hideAscetic":
             if (instance_exists(oascetic)) oascetic.visible = false;
             break;
+
         case "fadeToForest":
             with (vidushakha) { vidushakaState = "done"; }
             forestVisitCount++;
-            if (instance_exists(oPlayer_secondhalfnpc)) {
-                global.spawnX = oPlayer_secondhalfnpc.x;
-                global.spawnY = oPlayer_secondhalfnpc.y;
-            }
-            room_goto(rjungleact1);
+            room_goto(rjungleact1secondhalf);
             break;
 
-        // ── Scene 8: Anasuya + Priyamvada walk in after mar ──
         case "walkInFriends":
-            // Set targets near Shakuntala
             var _sx = instance_exists(shakuntalanpc) ? shakuntalanpc.x : room_width / 2;
             var _sy = instance_exists(shakuntalanpc) ? shakuntalanpc.y : room_height / 2;
-            with (anasuya)    { targetX = _sx - 20; targetY = _sy + 8;  npcState = "walkin"; }
-            with (priyamvada) { targetX = _sx + 20; targetY = _sy + 8;  npcState = "walkin"; }
-            // After friends arrive, trigger gandharva marriage dialogue
-            // Short delay then fire — handled by a flag
-            oDialogueManager.friendsWalkTimer = room_speed * 2;
+            with (anasuya)    { targetX = _sx - 20; targetY = _sy + 8; npcState = "walkin"; }
+            with (priyamvada) { targetX = _sx + 20; targetY = _sy + 8; npcState = "walkin"; }
+            friendsWalkTimer = room_speed * 2;
             break;
 
-        // ── Scene 9: Departure ────────────────────────────────
         case "triggerDeparture":
             with (oDialogueManager) startDialogue("departure");
             break;
 
         case "kingDeparts":
-            // Lock player, hide King, trigger Durvasa entrance
-            with (oPlayer_firsthalf) {
-                state        = playerstatelocked;
-                visible      = false;
+            var _kp = instance_exists(oPlayer_firsthalf_1) ? oPlayer_firsthalf_1 : oPlayer_firsthalf;
+            with (_kp) {
+                state   = playerstatelocked;
+                visible = false;
             }
             with (durvasanpc) { npcState = "walkin"; }
             break;
 
-        // ── Scene 10: End of Act 1 ───────────────────────────
         case "act1End":
-            // Lock everyone — act is over
-            with (oPlayer_firsthalf) { state = playerstatelocked; }
-            with (durvasanpc)        { npcState = "done"; }
-            // Transition to Act 2 when ready:
-            // room_goto(rjungleact2);
+            var _kp2 = instance_exists(oPlayer_firsthalf_1) ? oPlayer_firsthalf_1 : oPlayer_firsthalf;
+            with (_kp2) { state = playerstatelocked; }
+            with (durvasanpc) { npcState = "done"; }
+            // room_goto(rjungleact2); // wire when Act 2 is ready
             break;
     }
 }

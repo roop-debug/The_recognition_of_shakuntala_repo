@@ -5,9 +5,9 @@ image_speed=0;
 hSpeed=0;
 vSpeed=0;
 speedWalk=1.0;
-spriterun=chariotmove;
-spriteidle=chariotplayer;
-spriteattack= chariotattack;
+spriterun=dushyantaunarmedmove;
+spriteidle=dushyantaunarmedplayer;
+
 localFrame = 0;
 attackCooldown = 0;
 applyspawn();

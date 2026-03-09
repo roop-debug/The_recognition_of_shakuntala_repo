@@ -1,12 +1,12 @@
 {
   "$GMObject":"",
-  "%Name":"oareatrigger_1",
+  "%Name":"oareatrigger_shakmon",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"oareatrigger_1",
+  "name":"oareatrigger_shakmon",
   "overriddenProperties":[],
   "parent":{
     "name":"object",

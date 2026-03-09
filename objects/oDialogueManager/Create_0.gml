@@ -9,6 +9,7 @@ pendingEndCallback = "";
 activDialogueSound = -1;
 isActive = false;
 unlockPlayerTimer = 0;
+friendsWalkTimer = 0; 
 
 // Build all dialogue data
 global.dialogue = {};
@@ -34,8 +35,8 @@ global.dialogue[$ "hunting_start"] = [
 ];
 global.dialogue[$ "hunting1"] = [
     { speaker: "King Dushyanta", text: "You speak rightly.\nI will not disturb what seeks sanctuary.\nMy arrow returns to rest.", bg: 0, audio: Hunting_scene_1 },
-    { speaker: "Ascetic",        text: "Your restraint honors your crown.\nPower governed by dharma is true kingship.", bg: 0, audio: AsceticAct1D2,
-      responses: [{ label: "...", next: "0" }] }
+    { speaker: "Ascetic",        text: "Your restraint honors your crown.\nPower governed by dharma is true kingship.", bg: 0, audio: AsceticAct1D2}
+      
 ];
 
 global.dialogue[$ "hunting2"] = [
@@ -116,13 +117,13 @@ global.dialogue[$ "duty1"] = [
     { speaker: "King Dushyanta", text: "A king belongs first to his people.\nI will return immediately.", bg: 0, audio:Npc_calls_him_back_1 },
     { speaker: "Shakuntala",     text: "So swiftly?", bg: 0, audio:shakuntala_act1_no5 },
     { speaker: "Priyamvada",     text: "Duty is a stern rival.", bg: 0, audio: PriyamvadaACT1D4 },
-    { speaker: "",               text: "Press V to go to the capital.", bg: 0 }
+
 ];
 
 global.dialogue[$ "duty2"] = [
     { speaker: "King Dushyanta", text: "The summons comes too soon.\nYet I cannot deny obligation.", bg: 0, audio: Npc_calls_him_back_2 },
     { speaker: "Anasuya",        text: "His words leave, his thoughts remain.", bg: 0, audio: AnasuyaACT1D4 },
-    { speaker: "",               text: "Press V to go to the capital.", bg: 0 }
+
 ];
 
 global.dialogue[$ "duty3"] = [
@@ -166,20 +167,27 @@ global.dialogue[$ "shakmon_entry"] = [
     audio: Return_to_hermitage,
     responses: [{label: "..." , next: "shakmon" }]
     
-}
-];
-global.dialogue[$ "shakmon"] = [
+},
     { 
-        speaker: "Shakuntala", 
+        speaker: "Shakuntala(to herself)", 
         text: "Why does his absence disturb my thoughts?\nI had known peace before this meeting.\nNow even silence feels altered.", 
         bg: 0,
-        audio: shakuntala_act1_no7,
-      responses: [
+        audio: shakuntala_act1_no7}
+      
+      
+];
+global.dialogue[$ "confess"] = [
+{
+    speaker: "How do you wish to confess?",
+    text: "",
+    bg: 0,
+    responses: [
           { label: "Speak Directly",         next: "direct" },
           { label: "Speak Cautiously",       next: "cautious" },
           { label: "Ask Her Feeling First",  next: "ask" }
-      ]}
-];
+    ]
+}
+    ];
 
 global.dialogue[$ "direct"] = [
     { 
