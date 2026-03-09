@@ -354,7 +354,8 @@ global.dialogue[$ "durvasa_curse"] = [
     {
         speaker: "Anasuya",
         text: "Holy sir, she is newly married!",
-        bg: 0
+        bg: 0,
+        audio:AnasuyaACT1D5
     },
     {
         speaker: "Durvasa",
@@ -378,5 +379,222 @@ global.dialogue[$ "court1"] = [
         ],
         onEnd: ""
     }
+];
+global.dialogue[$ "farewell_start"] = [
+    { speaker: "Kanva",      text: "Daughter, the time has come.\nThe hermitage that sheltered you now entrusts you to your husband's house.\nRemember, patience in joy, dignity in sorrow.", bg: 0 },
+    { speaker: "Priyamvada", text: "The palace may glitter, but do not let it blind you.", bg: 0, audio: PriyamvadaACT2D1 },
+    { speaker: "Anasuya",    text: "And if ever doubt rises, remember who you are.", bg: 0, audio: AnasuyaACT2D1 },
+    {
+        speaker: "Kanva",
+        text: "Go not as one sent away,\nbut as one fulfilled.",
+        bg: 0,
+        responses: [
+            { label: "Thank Kanva sincerely.",               next: "farewell1" },
+            { label: "Admit you feel unready.",              next: "farewell2" },
+            { label: "Speak with steady confidence.",        next: "farewell3" },
+            { label: "Ask if destiny can truly be trusted.", next: "farewell4" }
+        ]
+    }
+];
+
+global.dialogue[$ "farewell1"] = [
+    { speaker: "Shakuntala", text: "Father, whatever strength I carry comes from this place.\nI will not let your faith in me fade.", bg: 0, audio: shakuntala_act2_no1 },
+    { speaker: "Kanva",      text: "Then you go prepared.", bg: 0, onEnd: "beginJourney" }
+];
+
+global.dialogue[$ "farewell2"] = [
+    { speaker: "Shakuntala", text: "I have never known a world beyond these trees.\nWhat if I falter there?", bg: 0, audio: shakuntala_act2_no2 },
+    { speaker: "Kanva",      text: "Even trees bend before they stand firm.", bg: 0, onEnd: "beginJourney" }
+];
+
+global.dialogue[$ "farewell3"] = [
+    { speaker: "Shakuntala", text: "I go as wife to my rightful place.\nFear will not master me.", bg: 0, audio: shakuntala_act2_no3 },
+    { speaker: "Priyamvada", text: "That is the courage we hoped to see.", bg: 0, audio: PriyamvadaACT2D2, onEnd: "beginJourney" }
+];
+
+global.dialogue[$ "farewell4"] = [
+    { speaker: "Shakuntala", text: "Is destiny certain, Father?\nOr must it be fought for?", bg: 0, audio: shakuntala_act2_no4 },
+    { speaker: "Kanva",      text: "Destiny tests before it rewards.", bg: 0, onEnd: "beginJourney" }
+];
+
+// ─── 3. RIVER CROSSING — RING LOST ────────────────────────
+global.dialogue[$ "ring_lost"] = [
+    {
+        speaker: "Shakuntala",
+        text: "The ring is gone.",
+        bg: 0,
+        audio: shakuntala_act2_no5,
+        responses: [
+            { label: "Panic openly.",                          next: "ring1" },
+            { label: "Search frantically but silently.",       next: "ring2" },
+            { label: "Force yourself to remain calm.",         next: "ring3" },
+            { label: "Convince yourself it is not important.", next: "ring4" }
+        ]
+    }
+];
+
+global.dialogue[$ "ring1"] = [
+    { speaker: "Shakuntala", text: "The ring, no...\nIt was here.\nIt cannot be gone!", bg: 0, audio: shakuntala_act2_no6 },
+    { speaker: "Shakuntala", text: "How could I be so careless?\nThis was the proof of everything.", bg: 0, audio: shakuntala_act2_no7, onEnd: "continueJourney" }
+];
+
+global.dialogue[$ "ring2"] = [
+    { speaker: "Shakuntala", text: "It must have fallen near the bank...\nI will find it.", bg: 0, audio: shakuntala_act2_no8 },
+    { speaker: "Shakuntala", text: "The current has taken it.", bg: 0, audio: shakuntala_act2_no9, onEnd: "continueJourney" }
+];
+
+global.dialogue[$ "ring3"] = [
+    { speaker: "Shakuntala", text: "It is only a token.\nWhat we vowed was real.", bg: 0, audio: shakuntala_act2_no10 },
+    { speaker: "Shakuntala", text: "Truth does not drown in water.", bg: 0, audio: shakuntala_act2_no11, onEnd: "continueJourney" }
+];
+
+global.dialogue[$ "ring4"] = [
+    { speaker: "Shakuntala", text: "The ring is gone...\nBut he will not need it.", bg: 0, audio: shakuntala_act2_no12 },
+    { speaker: "Shakuntala", text: "He will remember.", bg: 0, audio: shakuntala_act2_no13, onEnd: "continueJourney" }
+];
+
+// ─── 4. ARRIVAL AT THE CAPITAL ────────────────────────────
+global.dialogue[$ "arrival"] = [
+    {
+        speaker: "Guard",
+        text: "State your purpose.",
+        bg: 0,
+        audio: GuardACT2D1,
+        responses: [
+            { label: "Declare you are the queen.",           next: "arrival1" },
+            { label: "Say you seek audience with the king.", next: "arrival2" },
+            { label: "State you come from the hermitage.",   next: "arrival3" },
+            { label: "Speak with quiet authority.",          next: "arrival4" }
+        ]
+    }
+];
+
+global.dialogue[$ "arrival1"] = [
+    { speaker: "Shakuntala", text: "I am wife to King Dushyanta.\nAnnounce me.", bg: 0, audio: shakuntala_act2_no14 },
+    { speaker: "Guard",      text: "You will wait while we inform the court.", bg: 0, audio: GuardACT2D2, onEnd: "enterCourt" }
+];
+
+global.dialogue[$ "arrival2"] = [
+    { speaker: "Shakuntala", text: "I request audience with the king\non a matter of personal bond.", bg: 0, audio: shakuntala_act2_no15 },
+    { speaker: "Guard",      text: "Very well. Remain here.", bg: 0, audio: GuardACT2D3, onEnd: "enterCourt" }
+];
+
+global.dialogue[$ "arrival3"] = [
+    { speaker: "Shakuntala", text: "I come from Sage Kanva's hermitage.\nThe king once visited there.", bg: 0, audio: shakuntala_act2_no16 },
+    { speaker: "Guard",      text: "The court will decide if that warrants entry.", bg: 0, audio: GuardACT2D4, onEnd: "enterCourt" }
+];
+
+global.dialogue[$ "arrival4"] = [
+    { speaker: "Shakuntala", text: "The king will recognize me.\nInform him I have arrived.", bg: 0, audio: shakuntala_act2_no17 },
+    { speaker: "Guard",      text: "We shall see.", bg: 0, audio: GuardACT2D5, onEnd: "enterCourt" }
+];
+
+// ─── 5. COURT OF KING DUSHYANTA ───────────────────────────
+global.dialogue[$ "court_entry"] = [
+    { speaker: "Herald",    text: "A woman from the hermitage seeks audience.", bg: 0, audio: HeraldACT2D1 },
+    {
+        speaker: "Dushyanta",
+        text: "Let her approach.",
+        bg: 0,
+        audio: Court_of_king_Dushyanta_1,
+        responses: [
+            { label: "Address him with affection.",      next: "court_act2_1" },
+            { label: "Speak formally before the court.", next: "court_act2_2" },
+            { label: "Declare your marriage clearly.",   next: "court_act2_3" },
+            { label: "Test his memory first.",           next: "court_act2_4" }
+        ]
+    }
+];
+
+global.dialogue[$ "court_act2_1"] = [
+    { speaker: "Shakuntala", text: "My lord...\nI stand before you as one joined to you in vow.", bg: 0, audio: shakuntala_act2_no18 },
+    { speaker: "Dushyanta",  text: "You speak as though we share history.", bg: 0, audio: Court_of_king_Dushyanta_2, onEnd: "proofDemanded" }
+];
+
+global.dialogue[$ "court_act2_2"] = [
+    { speaker: "Shakuntala", text: "Your Majesty,\nbefore sacred ground we pledged ourselves.", bg: 0, audio: shakuntala_act2_no19 },
+    { speaker: "Dushyanta",  text: "I recall no such pledge.", bg: 0, audio: Court_of_king_Dushyanta_3, onEnd: "proofDemanded" }
+];
+
+global.dialogue[$ "court_act2_3"] = [
+    { speaker: "Shakuntala", text: "I am your lawful wife,\nunited by mutual consent in the hermitage.", bg: 0, audio: shakuntala_act2_no20 },
+    { speaker: "Dushyanta",  text: "Such a claim demands proof.", bg: 0, audio: Court_of_king_Dushyanta_4, onEnd: "proofDemanded" }
+];
+
+global.dialogue[$ "court_act2_4"] = [
+    { speaker: "Shakuntala", text: "Do you not remember the grove?\nThe day you set aside your bow?", bg: 0, audio: shakuntala_act2_no21 },
+    { speaker: "Dushyanta",  text: "I remember no such intimacy.", bg: 0, audio: Court_of_king_Dushyanta_5, onEnd: "proofDemanded" }
+];
+
+// ─── 6. PROOF DEMANDED ────────────────────────────────────
+global.dialogue[$ "proof_scene"] = [
+    {
+        speaker: "Dushyanta",
+        text: "If I had made such vow,\nthere would be token or witness.\nProduce it.",
+        bg: 0,
+        audio: Proof_demanded_1,
+        responses: [
+            { label: "Explain the ring was lost.",        next: "proof1" },
+            { label: "Appeal to his conscience.",         next: "proof2" },
+            { label: "Stand firm despite lacking proof.", next: "proof3" },
+            { label: "Accuse him of willful denial.",     next: "proof4" }
+        ]
+    }
+];
+
+global.dialogue[$ "proof1"] = [
+    { speaker: "Shakuntala", text: "You gave me a ring bearing your seal.\nIt was lost upon the river.", bg: 0, audio: shakuntala_act2_no22 },
+    { speaker: "Dushyanta",  text: "Convenient loss.", bg: 0, audio: Proof_demanded_2, onEnd: "finalRejection" }
+];
+
+global.dialogue[$ "proof2"] = [
+    { speaker: "Shakuntala", text: "Search your own heart.\nWould I stand falsely before you?", bg: 0, audio: shakuntala_act2_no23 },
+    { speaker: "Dushyanta",  text: "A king cannot rule by sentiment.", bg: 0, audio: Proof_demanded_3, onEnd: "finalRejection" }
+];
+
+global.dialogue[$ "proof3"] = [
+    { speaker: "Shakuntala", text: "Whether you remember or not,\ntruth does not change.", bg: 0, audio: shakuntala_act2_no24 },
+    { speaker: "Dushyanta",  text: "Conviction is not evidence.", bg: 0, audio: Proof_demanded_4, onEnd: "finalRejection" }
+];
+
+global.dialogue[$ "proof4"] = [
+    { speaker: "Shakuntala", text: "You deny not me, but your own memory.", bg: 0, audio: shakuntala_act2_no25 },
+    { speaker: "Dushyanta",  text: "I deny what cannot be proven.", bg: 0, audio: Proof_demanded_5, onEnd: "finalRejection" }
+];
+
+// ─── 7. FINAL REJECTION ───────────────────────────────────
+global.dialogue[$ "rejection_scene"] = [
+    {
+        speaker: "Dushyanta",
+        text: "Until proof stands before this court,\nI cannot acknowledge your claim.\nThe throne cannot bend to uncertainty.",
+        bg: 0,
+        audio: Final_rejection_1,
+        responses: [
+            { label: "Plead openly.",                    next: "rejection1" },
+            { label: "Withdraw in wounded dignity.",     next: "rejection2" },
+            { label: "Speak with restrained sorrow.",    next: "rejection3" },
+            { label: "Issue a final warning of truth.",  next: "rejection4" }
+        ]
+    }
+];
+
+global.dialogue[$ "rejection1"] = [
+    { speaker: "Shakuntala", text: "To be forgotten is harsher than exile.", bg: 0, audio: shakuntala_act2_no26, onEnd: "escorted" }
+];
+
+global.dialogue[$ "rejection2"] = [
+    { speaker: "Shakuntala", text: "I will not beg remembrance.", bg: 0, audio: shakuntala_act2_no27, onEnd: "escorted" }
+];
+
+global.dialogue[$ "rejection3"] = [
+    { speaker: "Shakuntala", text: "Time will reveal what you refuse to see.", bg: 0, audio: shakuntala_act2_no28, onEnd: "escorted" }
+];
+
+global.dialogue[$ "rejection4"] = [
+    { speaker: "Shakuntala", text: "Truth returns, even to those who reject it.", bg: 0, onEnd: "escorted" }
+];
+
+global.dialogue[$ "escorted_out"] = [
+    { speaker: "Dushyanta", text: "Escort her from the court.", bg: 0, audio: Final_rejection_2, onEnd: "act2End" }
 ];
 

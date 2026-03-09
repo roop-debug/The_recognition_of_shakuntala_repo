@@ -1,12 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"oareatrigger_shakmon",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"oWinTile",
+  "eventList":[],
   "managed":true,
-  "name":"oareatrigger_shakmon",
+  "name":"oWinTile",
   "overriddenProperties":[],
   "parent":{
     "name":"object",
@@ -30,10 +27,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"Sprite7",
-    "path":"sprites/Sprite7/Sprite7.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
-  "visible":false,
+  "visible":true,
 }

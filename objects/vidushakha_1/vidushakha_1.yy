@@ -1,12 +1,12 @@
 {
   "$GMObject":"",
-  "%Name":"oareatrigger_shakmon",
+  "%Name":"vidushakha_1",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"oareatrigger_shakmon",
+  "name":"vidushakha_1",
   "overriddenProperties":[],
   "parent":{
     "name":"object",
@@ -31,9 +31,9 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Sprite7",
-    "path":"sprites/Sprite7/Sprite7.yy",
+    "name":"vidushakhanpc",
+    "path":"sprites/vidushakhanpc/vidushakhanpc.yy",
   },
   "spriteMaskId":null,
-  "visible":false,
+  "visible":true,
 }

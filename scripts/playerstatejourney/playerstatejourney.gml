@@ -1,79 +1,50 @@
+function playerstatejourney() {
 
-function playerstatejourney()
-{
-    // MOVEMENT (only if not riverHit)
-   
-    
-        hSpeed = lengthdir_x(inputMagnitude * speedWalk, inputDirection);
-    vSpeed= lengthdir_y(inputMagnitude*speedWalk,inputDirection);
-        x += hSpeed;
-        y += vSpeed;
-        x = clamp(x, 0, room_width);
-        y = clamp(y, 0, room_height);
-   
-    
+    // MOVEMENT
+    hSpeed = lengthdir_x(inputMagnitude * speedWalk, inputDirection);
+    vSpeed = lengthdir_y(inputMagnitude * speedWalk, inputDirection);
+    x += hSpeed;
+    y += vSpeed;
+    x = clamp(x, 0, room_width);
+    y = clamp(y, 0, room_height);
 
-
-    // OBSTACLE COLLISION
-    if(place_meeting(x,y,oJourneyObstacle) && !riverHit)
-    {
-        lives1-= 1;
-        camera_shake(3,3)
-    }
-
-
-    // RIVER COLLISION
-    if(place_meeting(x,y,oJourneyRiver) && !riverHit)
-    {
-        riverHit = true;
-        lives1 = 0;
-        ringLost = true;
-        riverRealizationTimer = 0;
-
-        spriterun = shakuntalamoving;
-        spriteidle = shakuntalaplayer;
-    }
-
-
-    // REALIZATION TIMER
-    if(riverHit)
-    {
-        riverRealizationTimer++;
-
-        if(riverRealizationTimer >= riverRealizationDelay)
-        {
-           state=playerstatelocked;
-
-            instance_create_layer(
-                RESOLUTION_W/2,
-                RESOLUTION_H/2,
-                "Instances",
-                oDialogueController
-            );
+    // INVINCIBILITY TIMER after a hit
+    if (riverHit) {
+        riverHitTimer--;
+        if (riverHitTimer <= 0) {
+            riverHit = false;
         }
     }
 
+    // RIVER COLLISION — lose one ring per hit
+    if (place_meeting(x, y, oJourneyRiver) && !riverHit) {
+        riverHit      = true;
+        riverHitTimer = riverHitDelay;
+        lives1--;
+        camera_shake(3, 3);
 
-    // -------------------------
-    // UPDATE SPRITE (EXACT STYLE)
-    // -------------------------
-
-    var _oldsprite = sprite_index;
-
-    if(inputMagnitude != 0 && !riverHit)
-    {
-        direction = 90;
-        sprite_index = spriterun;
+        if (lives1 <= 0) {
+            state  = playerstatelocked;
+            canMove = false;
+            with (oDialogueManager) startDialogue("ring_lost");
+        }
     }
-    else
-    {
+
+    // WIN TILE — advance to next room
+    if (place_meeting(x, y, oWinTile)) {
+        if (room == rjourneylevel1) room_goto(rjourneylevel2);
+        else if (room == rjourneylevel2) room_goto(rjourneylevel3);
+        else if (room == rjourneylevel3) room_goto(rcourtact2);
+    }
+
+    // SPRITE UPDATE
+    var _oldsprite = sprite_index;
+    if (inputMagnitude != 0) {
+        direction    = inputDirection;
+        sprite_index = spriterun;
+    } else {
         sprite_index = spriteidle;
     }
-
-    if(_oldsprite != sprite_index)
-    {
-        localFrame = 0;
-    }
-
+    if (_oldsprite != sprite_index) localFrame = 0;
     animatesprite();
 }

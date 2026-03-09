@@ -7,10 +7,11 @@ function startDialogue(key) {
     activeChainKey = key;
     isActive = true;
 
-   var _player = instance_exists(oPlayer_shakuntala)   ? oPlayer_shakuntala
-            : (instance_exists(oPlayer_firsthalf_1) ? oPlayer_firsthalf_1
-            : (instance_exists(oPlayer_firsthalf)   ? oPlayer_firsthalf
-            :  oPlayer_secondhalfnpc));
+   var _player = instance_exists(oPlayer_shakuntalagame) ? oPlayer_shakuntalagame
+            : (instance_exists(oPlayer_shakuntala)    ? oPlayer_shakuntala
+            : (instance_exists(oPlayer_firsthalf_1)   ? oPlayer_firsthalf_1
+            : (instance_exists(oPlayer_firsthalf)     ? oPlayer_firsthalf
+            :  oPlayer_secondhalfnpc)));
     with (_player) {
         if (state != playerstatelocked) {
             laststate = state;
@@ -52,10 +53,11 @@ function endDialogue() {
         activDialogueSound = -1;
     }
 
-    var _player = instance_exists(oPlayer_shakuntala)   ? oPlayer_shakuntala
-            : (instance_exists(oPlayer_firsthalf_1) ? oPlayer_firsthalf_1
-            : (instance_exists(oPlayer_firsthalf)   ? oPlayer_firsthalf
-            :  oPlayer_secondhalfnpc));
+    var _player = instance_exists(oPlayer_shakuntalagame) ? oPlayer_shakuntalagame
+            : (instance_exists(oPlayer_shakuntala)    ? oPlayer_shakuntala
+            : (instance_exists(oPlayer_firsthalf_1)   ? oPlayer_firsthalf_1
+            : (instance_exists(oPlayer_firsthalf)     ? oPlayer_firsthalf
+            :  oPlayer_secondhalfnpc)));
     with (_player) { state = laststate; }
 
     if (pendingEndCallback != "") {
@@ -104,7 +106,38 @@ function handleEndCallback(flag) {
                 with (oPlayer_shakuntala) { state = playerstatelocked; }
             }
             with (durvasanpc) { npcState = "done"; }
+            with(vidushakha_1){vidushakaState= "walkin";}
+            instance_create_layer(0, 0, "Instances", oActTitle);
             // room_goto(rjungleact2);
             break;
+        case "beginJourney":
+            room_goto(rjourneylevel1);
+            break;
+
+        case "continueJourney":
+            // room_goto(r_arrival); // wire when arrival room is ready
+            break;
+
+        case "enterCourt":
+            // room_goto(r_act2court); // wire when act2 court room is ready
+            break;
+
+        case "proofDemanded":
+            with (oDialogueManager) startDialogue("proof_scene");
+            break;
+
+        case "finalRejection":
+            with (oDialogueManager) startDialogue("rejection_scene");
+            break;
+
+        case "escorted":
+            with (oDialogueManager) startDialogue("escorted_out");
+            break;
+
+        case "act2End":
+            var _sp = instance_exists(oPlayer_shakuntala) ? oPlayer_shakuntala : noone;
+            if (instance_exists(_sp)) with (_sp) { state = playerstatelocked; }
+            // room_goto(r_act2end);
+            break;
     }
-}
+}   
