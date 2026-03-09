@@ -1,1 +1,1 @@
-room_goto(rcourtact2);
+room_goto(rjourneylevel1);
