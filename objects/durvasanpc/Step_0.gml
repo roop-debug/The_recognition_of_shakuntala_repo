@@ -6,8 +6,7 @@ switch (npcState) {
         break;
 
     case "walkin":
-        // Walk toward Shakuntala
-        var _target = instance_exists(shakuntalanpc) ? shakuntalanpc : noone;
+        var _target = instance_exists(oPlayer_shakuntala) ? oPlayer_shakuntala : noone;
         if (instance_exists(_target)) {
             targetX = _target.x + 32;
             targetY = _target.y;
@@ -23,6 +22,7 @@ switch (npcState) {
         } else {
             npcState     = "dialogue";
             sprite_index = spriteidle;
+            direction    = point_direction(x, y, _target.x, _target.y);
             animatenpc();
             with (oDialogueManager) {
                 startDialogue("durvasa_curse");
@@ -36,7 +36,6 @@ switch (npcState) {
         break;
 
     case "done":
-        // Walk off screen left
         x -= npcSpeed;
         direction    = 180;
         sprite_index = spriterun;

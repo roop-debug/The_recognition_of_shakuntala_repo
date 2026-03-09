@@ -7,9 +7,10 @@ function startDialogue(key) {
     activeChainKey = key;
     isActive = true;
 
-    var _player = instance_exists(oPlayer_firsthalf_1) ? oPlayer_firsthalf_1
-                : (instance_exists(oPlayer_firsthalf)  ? oPlayer_firsthalf
-                :  oPlayer_secondhalfnpc);
+   var _player = instance_exists(oPlayer_shakuntala)   ? oPlayer_shakuntala
+            : (instance_exists(oPlayer_firsthalf_1) ? oPlayer_firsthalf_1
+            : (instance_exists(oPlayer_firsthalf)   ? oPlayer_firsthalf
+            :  oPlayer_secondhalfnpc));
     with (_player) {
         if (state != playerstatelocked) {
             laststate = state;
@@ -51,9 +52,10 @@ function endDialogue() {
         activDialogueSound = -1;
     }
 
-    var _player = instance_exists(oPlayer_firsthalf_1) ? oPlayer_firsthalf_1
-                : (instance_exists(oPlayer_firsthalf)  ? oPlayer_firsthalf
-                :  oPlayer_secondhalfnpc);
+    var _player = instance_exists(oPlayer_shakuntala)   ? oPlayer_shakuntala
+            : (instance_exists(oPlayer_firsthalf_1) ? oPlayer_firsthalf_1
+            : (instance_exists(oPlayer_firsthalf)   ? oPlayer_firsthalf
+            :  oPlayer_secondhalfnpc));
     with (_player) { state = laststate; }
 
     if (pendingEndCallback != "") {
@@ -92,15 +94,17 @@ function handleEndCallback(flag) {
             with (_kp) {
                 state   = playerstatelocked;
                 visible = false;
+                
             }
-            with (durvasanpc) { npcState = "walkin"; }
+            room_goto(rjungleact2);
             break;
 
-        case "act1End":
-            var _kp2 = instance_exists(oPlayer_firsthalf_1) ? oPlayer_firsthalf_1 : oPlayer_firsthalf;
-            with (_kp2) { state = playerstatelocked; }
+       case "act1End":
+            if (instance_exists(oPlayer_shakuntala)) {
+                with (oPlayer_shakuntala) { state = playerstatelocked; }
+            }
             with (durvasanpc) { npcState = "done"; }
-            // room_goto(rjungleact2); // wire when Act 2 is ready
+            // room_goto(rjungleact2);
             break;
     }
 }

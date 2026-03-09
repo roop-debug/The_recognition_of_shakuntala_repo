@@ -1,23 +1,13 @@
-state = playerstatejourney;
-laststate = state;
-
-image_speed = 0;
-
-hSpeed = 0;
-vSpeed = 0;
-
-speedWalk = 2;
-
-spriterun = shakuntalamoving;
-spriteidle = shakuntalaplayer;
-spritehit = chariotattack;
-
+collisionmap=layer_tilemap_get_id(layer_get_id("col"));
+state =playerstatefree;
+laststate= state;
+image_speed=0;
+hSpeed=0;
+vSpeed=0;
+speedWalk=1.0;
+spriterun=shakuntalamoving;
+spriteidle=shakuntalaplayer;
+spriteattack= dushyantaunarmedmove;
 localFrame = 0;
-
-lives1 = 2;
-
-riverHit = false;
-ringLost = false;
-
-riverRealizationTimer = 0;
-riverRealizationDelay = room_speed * 5;
+attackCooldown = 0;
+canMove = true;

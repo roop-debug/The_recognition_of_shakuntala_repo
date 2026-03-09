@@ -35,9 +35,10 @@ function newtextbox(){
             responsescript = [-1];
         }
     }
-   var _player = instance_exists(oPlayer_firsthalf_1) ? oPlayer_firsthalf_1
-                : (instance_exists(oPlayer_firsthalf)  ? oPlayer_firsthalf
-                :  oPlayer_secondhalfnpc);
+   var _player = instance_exists(oPlayer_shakuntala)   ? oPlayer_shakuntala
+            : (instance_exists(oPlayer_firsthalf_1) ? oPlayer_firsthalf_1
+            : (instance_exists(oPlayer_firsthalf)   ? oPlayer_firsthalf
+            :  oPlayer_secondhalfnpc));
     with (_player) {
         if (state != playerstatelocked) {
             laststate = state;
