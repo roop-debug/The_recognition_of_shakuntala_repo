@@ -1,12 +1,12 @@
 {
   "$GMObject":"",
-  "%Name":"osignpost",
+  "%Name":"oareatrigger_signpost2",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"osignpost",
+  "name":"oareatrigger_signpost2",
   "overriddenProperties":[],
   "parent":{
     "name":"object",
@@ -31,12 +31,9 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"signpost",
-    "path":"sprites/signpost/signpost.yy",
+    "name":"Sprite7",
+    "path":"sprites/Sprite7/Sprite7.yy",
   },
-  "spriteMaskId":{
-    "name":"signpost",
-    "path":"sprites/signpost/signpost.yy",
-  },
-  "visible":true,
+  "spriteMaskId":null,
+  "visible":false,
 }

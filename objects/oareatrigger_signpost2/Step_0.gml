@@ -4,7 +4,7 @@ if (!triggered && place_meeting(x, y, oPlayer_firsthalf))
 
     var _p = instance_place(x, y, oPlayer_firsthalf);
 
-    newtextbox("The King is on a hunt",0);
+    newtextbox("Hunting Prohibited",0);
 
     instance_destroy();
 }
