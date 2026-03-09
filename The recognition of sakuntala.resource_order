@@ -203,6 +203,7 @@
     {"name":"VidusakaAct1D3","order":109,"path":"sounds/VidusakaAct1D3/VidusakaAct1D3.yy",},
     {"name":"VidusakaAct1D4","order":110,"path":"sounds/VidusakaAct1D4/VidusakaAct1D4.yy",},
     {"name":"VidusakaAct1D5","order":111,"path":"sounds/VidusakaAct1D5/VidusakaAct1D5.yy",},
+    {"name":"bighut","order":30,"path":"sprites/bighut/bighut.yy",},
     {"name":"boar","order":13,"path":"sprites/boar/boar.yy",},
     {"name":"chariotattack","order":3,"path":"sprites/chariotattack/chariotattack.yy",},
     {"name":"chariotplayer","order":1,"path":"sprites/chariotplayer/chariotplayer.yy",},
@@ -225,6 +226,7 @@
     {"name":"shakuntalaplayer","order":19,"path":"sprites/shakuntalaplayer/shakuntalaplayer.yy",},
     {"name":"signpost","order":6,"path":"sprites/signpost/signpost.yy",},
     {"name":"sLifeIcon","order":15,"path":"sprites/sLifeIcon/sLifeIcon.yy",},
+    {"name":"smallhut","order":29,"path":"sprites/smallhut/smallhut.yy",},
     {"name":"Sprite_0001","order":2,"path":"sprites/Sprite_0001/Sprite_0001.yy",},
     {"name":"Sprite16","order":14,"path":"sprites/Sprite16/Sprite16.yy",},
     {"name":"Sprite22","order":22,"path":"sprites/Sprite22/Sprite22.yy",},
@@ -232,5 +234,7 @@
     {"name":"sTextBoxBg","order":4,"path":"sprites/sTextBoxBg/sTextBoxBg.yy",},
     {"name":"vidushakhamove","order":21,"path":"sprites/vidushakhamove/vidushakhamove.yy",},
     {"name":"vidushakhanpc","order":20,"path":"sprites/vidushakhanpc/vidushakhanpc.yy",},
+    {"name":"TileSet2","order":2,"path":"tilesets/TileSet2/TileSet2.yy",},
+    {"name":"TileSet3","order":3,"path":"tilesets/TileSet3/TileSet3.yy",},
   ],
 }
