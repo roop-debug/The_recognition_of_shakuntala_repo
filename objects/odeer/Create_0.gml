@@ -1,7 +1,7 @@
 image_speed = 1;
 image_xscale = 0.5;
 image_yscale = 0.5;
-move_spd = 1.2;
+move_spd = 1.5;
 state = 0;          // 0=moving, 1=waiting
 
 points = [
