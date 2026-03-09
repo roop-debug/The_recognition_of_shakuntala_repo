@@ -138,6 +138,7 @@ function handleEndCallback(flag) {
             var _sp = instance_exists(oPlayer_shakuntala) ? oPlayer_shakuntala : noone;
             if (instance_exists(_sp)) with (_sp) { state = playerstatelocked; }
             // room_goto(r_act2end);
+            instance_create_layer(0, 0, "Instances", oTheend);
             break;
     }
 }   

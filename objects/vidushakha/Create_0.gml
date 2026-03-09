@@ -1,6 +1,6 @@
 image_speed = 0;
 path = [];
-vidushakaSpeed = 1;
+vidushakaSpeed = 0.75 ;
 vidushakaState = "idle"; // idle > walkin > dialogue > done
 targetX = 0;
 targetY = 0;

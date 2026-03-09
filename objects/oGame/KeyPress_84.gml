@@ -1,1 +1,1 @@
-room_goto(rjungleact1);
+room_goto(rcourtact2);

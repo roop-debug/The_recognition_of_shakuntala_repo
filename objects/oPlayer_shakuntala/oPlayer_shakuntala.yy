@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"shakuntalamoving",
-    "path":"sprites/shakuntalamoving/shakuntalamoving.yy",
+    "name":"shakuntalaplayer",
+    "path":"sprites/shakuntalaplayer/shakuntalaplayer.yy",
   },
   "spriteMaskId":null,
   "visible":true,
