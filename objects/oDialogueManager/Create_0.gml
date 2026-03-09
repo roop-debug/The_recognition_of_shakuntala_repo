@@ -165,7 +165,6 @@ global.dialogue[$ "shakmon_entry"] = [
     text: "The grove feels unchanged.\nIt is I who am restless.",
     bg: 0,
     audio: Return_to_hermitage,
-    responses: [{label: "..." , next: "shakmon" }]
     
 },
     { 
