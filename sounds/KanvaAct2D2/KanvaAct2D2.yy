@@ -1,6 +1,6 @@
 {
   "$GMSound":"v2",
-  "%Name":"AUDIO_2026_02_24_11_10_38_2",
+  "%Name":"KanvaAct2D2",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -10,9 +10,9 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":3.6455328,
+  "duration":4.760091,
   "exportDir":"",
-  "name":"AUDIO_2026_02_24_11_10_38_2",
+  "name":"KanvaAct2D2",
   "parent":{
     "name":"audio",
     "path":"folders/audio.yy",
@@ -21,6 +21,6 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"AUDIO_2026_02_24_11_10_38_2.mp3",
+  "soundFile":"KanvaAct2D2.mp3",
   "volume":1.0,
 }

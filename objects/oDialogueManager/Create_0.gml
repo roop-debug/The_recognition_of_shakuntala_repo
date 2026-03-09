@@ -97,7 +97,7 @@ global.dialogue[$ "beereveal2"] = [
 global.dialogue[$ "beereveal3"] = [
     { speaker: "King Dushyanta", text: "I should not have remained hidden.\nAllow me to correct that discourtesy.", bg: 0, audio:Bee_incident_reveal_4 },
     { speaker: "Shakuntala",     text: "You meant no harm?", bg: 0, audio:shakuntala_act1_no4 },
-    { speaker: "King Dushyanta", text: "None. I was struck by the peace here.", bg: 0 },//no audio file for this
+    { speaker: "King Dushyanta", text: "None. I was struck by the peace here.", bg: 0, audio: Bee_incident___reveal_5 },
     { speaker: "Anasuya",        text: "Then peace has found you as well.", bg: 0, audio: AnasuyaACT1D3 },
     { speaker: "",               text: "The messenger is here for you.", bg: 0 }
 ];
@@ -264,18 +264,20 @@ global.dialogue[$ "gandharva"] = [
     {
         speaker: "Shakuntala",
         text: "Then let the forest remember what we declare.",
-        bg: 0
+        bg: 0,
+		audio: shakuntala_act1_no11
     },
     {
         speaker: "Dushyanta",
         text: "This ring bears my seal.\nShould doubt arise, it will speak for me.",
-        bg: 0
+        bg: 0,
+		audio: Gandharva_marriage_2
     },
     {
         speaker: "Priyamvada",
         text: "A token binds memory to promise.",
         bg: 0,
-        audio: Gandharva_marriage_2,
+        audio: PriyamvadaACT1D5,
         onEnd: "triggerDeparture"
     }
 ];
@@ -298,13 +300,15 @@ global.dialogue[$ "depart1"] = [
     {
         speaker: "King Dushyanta",
         text: "I will send for you soon.\nTrust my word.",
-        bg: 0
+        bg: 0,
+		audio: Dushyanta_leaves_1
+		
     },
     {
         speaker: "Shakuntala",
         text: "I will hold to that promise.\nYet the forest will feel empty without you.\nDo not let memory fade where affection has taken root.",
         bg: 0,
-        audio: shakuntala_act1_no11,
+		audio: shakuntala_act1_9_1_,
         onEnd: "kingDeparts"
     }
 ];
@@ -312,13 +316,15 @@ global.dialogue[$ "depart1"] = [
 global.dialogue[$ "depart2"] = [
     {
         speaker: "King Dushyanta",
-        text: "Time may intervene — but not intention.",
-        bg: 0
+        text: "Time may intervene - but not intention.",
+        bg: 0,
+		audio: Dushyanta_leaves_2
     },
     {
         speaker: "Shakuntala",
         text: "I understand the burden you carry.\nStill, time can change even what feels certain.\nLet your intention remain stronger than absence.",
         bg: 0,
+		audio: shakuntala_act1_9_2_,
         onEnd: "kingDeparts"
     }
 ];
@@ -327,12 +333,14 @@ global.dialogue[$ "depart3"] = [
     {
         speaker: "King Dushyanta",
         text: "What we begin here will endure beyond distance.",
-        bg: 0
+        bg: 0,
+		audio: Dushyanta_leaves_3,
     },
     {
         speaker: "Shakuntala",
         text: "Your confidence gives me strength.\nYet I am new to such partings.\nReturn before longing grows too heavy.",
         bg: 0,
+		audio: shakuntala_act1_9_3_,
         onEnd: "kingDeparts"
     }
 ];
@@ -355,11 +363,11 @@ global.dialogue[$ "durvasa_curse"] = [
         speaker: "Anasuya",
         text: "Holy sir, she is newly married!",
         bg: 0,
-        audio:AnasuyaACT1D5
+        audio: AnasuyaACT1D5
     },
     {
         speaker: "Durvasa",
-        text: "A token from him may restore remembrance.\nBut until then — oblivion.",
+        text: "A token from him may restore remembrance.\nBut until then - oblivion.",
         bg: 0,
         audio: DurvasaACT1D3,
         onEnd: "act1End"
@@ -381,13 +389,14 @@ global.dialogue[$ "court1"] = [
     }
 ];
 global.dialogue[$ "farewell_start"] = [
-    { speaker: "Kanva",      text: "Daughter, the time has come.\nThe hermitage that sheltered you now entrusts you to your husband's house.\nRemember, patience in joy, dignity in sorrow.", bg: 0 },
+    { speaker: "Kanva",      text: "Daughter, the time has come.\nThe hermitage that sheltered you now entrusts you to your husband's house.\nRemember, patience in joy, dignity in sorrow.", bg: 0, audio: KanvaAct2D1 },
     { speaker: "Priyamvada", text: "The palace may glitter, but do not let it blind you.", bg: 0, audio: PriyamvadaACT2D1 },
     { speaker: "Anasuya",    text: "And if ever doubt rises, remember who you are.", bg: 0, audio: AnasuyaACT2D1 },
     {
         speaker: "Kanva",
         text: "Go not as one sent away,\nbut as one fulfilled.",
         bg: 0,
+		audio: KanvaAct2D2,
         responses: [
             { label: "Thank Kanva sincerely.",               next: "farewell1" },
             { label: "Admit you feel unready.",              next: "farewell2" },
@@ -399,12 +408,12 @@ global.dialogue[$ "farewell_start"] = [
 
 global.dialogue[$ "farewell1"] = [
     { speaker: "Shakuntala", text: "Father, whatever strength I carry comes from this place.\nI will not let your faith in me fade.", bg: 0, audio: shakuntala_act2_no1 },
-    { speaker: "Kanva",      text: "Then you go prepared.", bg: 0, onEnd: "beginJourney" }
+    { speaker: "Kanva",      text: "Then you go prepared.", bg: 0, audio: KanvaAct2D3 , onEnd: "beginJourney" }
 ];
 
 global.dialogue[$ "farewell2"] = [
     { speaker: "Shakuntala", text: "I have never known a world beyond these trees.\nWhat if I falter there?", bg: 0, audio: shakuntala_act2_no2 },
-    { speaker: "Kanva",      text: "Even trees bend before they stand firm.", bg: 0, onEnd: "beginJourney" }
+    { speaker: "Kanva",      text: "Even trees bend before they stand firm.", bg: 0, audio: KanvaAct2D4, onEnd: "beginJourney" }
 ];
 
 global.dialogue[$ "farewell3"] = [
@@ -414,7 +423,7 @@ global.dialogue[$ "farewell3"] = [
 
 global.dialogue[$ "farewell4"] = [
     { speaker: "Shakuntala", text: "Is destiny certain, Father?\nOr must it be fought for?", bg: 0, audio: shakuntala_act2_no4 },
-    { speaker: "Kanva",      text: "Destiny tests before it rewards.", bg: 0, onEnd: "beginJourney" }
+    { speaker: "Kanva",      text: "Destiny tests before it rewards.", bg: 0, audio: KanvaAct2D5, onEnd: "beginJourney" }
 ];
 
 // ─── 3. RIVER CROSSING — RING LOST ────────────────────────
