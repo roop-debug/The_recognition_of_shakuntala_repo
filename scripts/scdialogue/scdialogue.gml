@@ -135,10 +135,14 @@ function handleEndCallback(flag) {
             break;
 
         case "act2End":
-            var _sp = instance_exists(oPlayer_shakuntala) ? oPlayer_shakuntala : noone;
+            var _sp = instance_exists(oPlayer_shakuntalagame) ? oPlayer_shakuntalagame
+            : (instance_exists(oPlayer_shakuntala)    ? oPlayer_shakuntala
+            : (instance_exists(oPlayer_firsthalf_1)   ? oPlayer_firsthalf_1
+            : (instance_exists(oPlayer_firsthalf)     ? oPlayer_firsthalf
+            :  oPlayer_secondhalfnpc)));
             if (instance_exists(_sp)) with (_sp) { state = playerstatelocked; }
-            // room_goto(r_act2end);
-            instance_create_layer(0, 0, "Instances", oTheend);
+            room_goto(rEndScreen);
+            
             break;
     }
 }   
