@@ -74,6 +74,7 @@
     {"id":{"name":"durvasanpc","path":"objects/durvasanpc/durvasanpc.yy",},},
     {"id":{"name":"messenger","path":"objects/messenger/messenger.yy",},},
     {"id":{"name":"oareatrigger_beescene","path":"objects/oareatrigger_beescene/oareatrigger_beescene.yy",},},
+    {"id":{"name":"oareatrigger_confess","path":"objects/oareatrigger_confess/oareatrigger_confess.yy",},},
     {"id":{"name":"oareatrigger_shakmon","path":"objects/oareatrigger_shakmon/oareatrigger_shakmon.yy",},},
     {"id":{"name":"oareatrigger","path":"objects/oareatrigger/oareatrigger.yy",},},
     {"id":{"name":"oarrow","path":"objects/oarrow/oarrow.yy",},},

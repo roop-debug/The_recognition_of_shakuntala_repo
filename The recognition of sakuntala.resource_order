@@ -14,6 +14,7 @@
     {"name":"durvasanpc","order":30,"path":"objects/durvasanpc/durvasanpc.yy",},
     {"name":"messenger","order":27,"path":"objects/messenger/messenger.yy",},
     {"name":"oareatrigger_beescene","order":29,"path":"objects/oareatrigger_beescene/oareatrigger_beescene.yy",},
+    {"name":"oareatrigger_confess","order":33,"path":"objects/oareatrigger_confess/oareatrigger_confess.yy",},
     {"name":"oareatrigger_shakmon","order":32,"path":"objects/oareatrigger_shakmon/oareatrigger_shakmon.yy",},
     {"name":"oareatrigger","order":5,"path":"objects/oareatrigger/oareatrigger.yy",},
     {"name":"oarrow","order":11,"path":"objects/oarrow/oarrow.yy",},

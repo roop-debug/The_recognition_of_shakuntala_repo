@@ -166,6 +166,7 @@ global.dialogue[$ "shakmon_entry"] = [
     bg: 0,
     audio: Return_to_hermitage,
     
+    
 },
     { 
         speaker: "Shakuntala(to herself)", 
@@ -177,8 +178,8 @@ global.dialogue[$ "shakmon_entry"] = [
 ];
 global.dialogue[$ "confess"] = [
 {
-    speaker: "How do you wish to confess?",
-    text: "",
+    speaker: "",
+    text: "How do you wish to confess?",
     bg: 0,
     responses: [
           { label: "Speak Directly",         next: "direct" },

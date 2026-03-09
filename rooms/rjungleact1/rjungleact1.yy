@@ -18,8 +18,8 @@
     {"name":"inst_2FA5C74D","path":"rooms/rjungleact1/rjungleact1.yy",},
     {"name":"inst_3CE09B90","path":"rooms/rjungleact1/rjungleact1.yy",},
     {"name":"inst_316BA3CF","path":"rooms/rjungleact1/rjungleact1.yy",},
-    {"name":"inst_1BFE6A12","path":"rooms/rjungleact1/rjungleact1.yy",},
     {"name":"inst_3A1D4A05","path":"rooms/rjungleact1/rjungleact1.yy",},
+    {"name":"inst_1BFE6A12","path":"rooms/rjungleact1/rjungleact1.yy",},
   ],
   "isDnd":false,
   "layers":[
