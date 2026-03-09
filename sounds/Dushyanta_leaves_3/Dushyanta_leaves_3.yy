@@ -1,6 +1,6 @@
 {
   "$GMSound":"v2",
-  "%Name":"AUDIO_2026_02_24_11_10_38",
+  "%Name":"Dushyanta_leaves_3",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -10,9 +10,9 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":3.993832,
+  "duration":5.9306803,
   "exportDir":"",
-  "name":"AUDIO_2026_02_24_11_10_38",
+  "name":"Dushyanta_leaves_3",
   "parent":{
     "name":"audio",
     "path":"folders/audio.yy",
@@ -21,6 +21,6 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"AUDIO_2026_02_24_11_10_38.mp3",
+  "soundFile":"Dushyanta_leaves_3.mp3",
   "volume":1.0,
 }
