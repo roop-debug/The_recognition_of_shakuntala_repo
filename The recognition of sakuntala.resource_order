@@ -10,6 +10,7 @@
     {"name":"tiles","order":30,"path":"folders/tiles.yy",},
   ],
   "ResourceOrderSettings":[
+    {"name":"ftext_1","order":2,"path":"fonts/ftext_1/ftext_1.yy",},
     {"name":"smaller","order":1,"path":"fonts/smaller/smaller.yy",},
     {"name":"anasuya","order":24,"path":"objects/anasuya/anasuya.yy",},
     {"name":"bear","order":12,"path":"objects/bear/bear.yy",},

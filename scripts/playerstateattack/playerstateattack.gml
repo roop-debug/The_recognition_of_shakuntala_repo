@@ -3,7 +3,7 @@ function playerstateattack() {
     vSpeed = 0;
 
     sprite_index = spriteattack;
-    image_speed  = 0.3;
+    image_speed  = 1;
 
     localFrame++;
     var _totalFrames = sprite_get_number(spriteattack);
@@ -12,7 +12,7 @@ function playerstateattack() {
 
     if (image_index >= _totalFrames - 1) {
         // fire arrow to the right
-        var _arrow       = instance_create_layer(x + 16, y, "instances", oarrow);
+        var _arrow       = instance_create_layer(x + 16, y, "Instances_1", oarrow);
         _arrow.direction = 0;
 
         // reset

@@ -1,26 +1,21 @@
-// Background
 draw_set_color(c_black);
 draw_rectangle(0, 0, RESOLUTION_W, RESOLUTION_H, false);
 
 draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
+draw_set_alpha(theEndAlpha);
 
-// "The End" fades in first
-if (done) {
-    draw_set_alpha(theEndAlpha);
-    draw_set_font(ftext);
-    draw_set_color(c_white);
-    draw_text(RESOLUTION_W / 2, RESOLUTION_H / 2 - 40, "The End");
+// "The End"
+draw_set_font(ftext_1);
+draw_set_color(c_white);
+draw_text(RESOLUTION_W / 2, RESOLUTION_H / 2 - 60, "The End");
 
-    // Credits scroll in below "The End"
-    draw_set_font(smaller);
-    for (var i = 0; i < array_length(credits); i++) {
-        var _y = scrollY + i * creditSpacing;
-        if (_y > -10 && _y < RESOLUTION_H + 10) {
-            draw_set_color(c_ltgray);
-            draw_text(RESOLUTION_W / 2, _y, credits[i]);
-        }
-    }
+// Credits static below
+draw_set_font(smaller);
+draw_set_color(c_ltgray);
+var _startY = RESOLUTION_H / 2 - 45;
+for (var i = 0; i < array_length(credits); i++) {
+    draw_text(RESOLUTION_W / 2, _startY + i * 15, credits[i]);
 }
 
 draw_set_alpha(1);

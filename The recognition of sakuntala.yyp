@@ -69,6 +69,7 @@
   },
   "name":"The recognition of sakuntala",
   "resources":[
+    {"id":{"name":"ftext_1","path":"fonts/ftext_1/ftext_1.yy",},},
     {"id":{"name":"ftext","path":"fonts/ftext/ftext.yy",},},
     {"id":{"name":"smaller","path":"fonts/smaller/smaller.yy",},},
     {"id":{"name":"anasuya","path":"objects/anasuya/anasuya.yy",},},

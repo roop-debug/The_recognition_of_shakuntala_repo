@@ -4,7 +4,7 @@ if (!triggered && place_meeting(x, y, oPlayer_firsthalf))
 
     var _p = instance_place(x, y, oPlayer_firsthalf);
 
-    newtextbox("Let the flowers guide you",0);
+    newtextbox("Let the flowers guide you\n!!Avoid The Water!!",0);
 
     instance_destroy();
 }

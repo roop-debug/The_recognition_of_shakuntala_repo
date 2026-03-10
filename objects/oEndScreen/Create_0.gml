@@ -1,7 +1,10 @@
 credits = [
+    "Programmed by:",
     "Roop Chakraborty",
     "Aarya Jaiswal",
-    "Hiten Makhija",
+    "Voiced By:",
+    "Charvi More As Shakuntala",
+    "Hiten Makhija As Vidushakha and Durvasa",
     "Shail Ghaywat As King Dushyanta",
     "Sarvesh Bandi As Sage Kanva"
 ];
