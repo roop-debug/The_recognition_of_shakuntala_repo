@@ -1,8 +1,2 @@
-// Destroy animal
-instance_destroy();
-
-// Destroy arrow
-with (other)
-{
-    instance_destroy();
-}
+instance_destroy(other); // destroy arrow
+instance_destroy();      // destroy boar

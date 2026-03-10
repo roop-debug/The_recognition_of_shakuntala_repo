@@ -9,6 +9,6 @@ keyLeft=keyboard_check(vk_left) or keyboard_check(ord("A"));
  inputDirection = point_direction(0,0,keyRight-keyLeft,keyDown-keyUp)
  inputMagnitude = (keyRight-keyLeft != 0 ) || (keyDown-keyUp != 0)
  
-if(attackCooldown>0)attackCooldown--;
+
 if(global.gamePaused == false) script_execute(state);
 

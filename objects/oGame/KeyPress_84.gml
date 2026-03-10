@@ -1,1 +1,1 @@
-room_goto(rjourneylevel1);
+room_goto(rjungleact2);

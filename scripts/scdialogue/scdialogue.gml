@@ -67,6 +67,7 @@ function endDialogue() {
 }
 
 function handleEndCallback(flag) {
+    show_debug_message(flag);
     switch (flag) {
 
         case "hideAscetic":
@@ -113,15 +114,7 @@ function handleEndCallback(flag) {
         case "beginJourney":
             room_goto(rjourneylevel1);
             break;
-
-        case "continueJourney":
-            // room_goto(r_arrival); // wire when arrival room is ready
-            break;
-
-        case "enterCourt":
-            // room_goto(r_act2court); // wire when act2 court room is ready
-            break;
-
+        
         case "proofDemanded":
             with (oDialogueManager) startDialogue("proof_scene");
             break;
@@ -135,6 +128,7 @@ function handleEndCallback(flag) {
             break;
 
         case "act2End":
+            show_debug_message("act2End invoked")
             var _sp = instance_exists(oPlayer_shakuntalagame) ? oPlayer_shakuntalagame
             : (instance_exists(oPlayer_shakuntala)    ? oPlayer_shakuntala
             : (instance_exists(oPlayer_firsthalf_1)   ? oPlayer_firsthalf_1

@@ -1,23 +1,25 @@
-function playerstateattack()
-{
-    // Stop movement
+function playerstateattack() {
     hSpeed = 0;
     vSpeed = 0;
 
-    // Set attack sprite
     sprite_index = spriteattack;
-    image_speed = 0.2;
+    image_speed  = 0.3;
 
-    // Fire arrow at specific frame
-    if (image_index >= image_number - 1)
-    {
-        // Spawn arrow
-        var _arrow = instance_create_layer(x + 16, y, "instances", oarrow);
-        _arrow.direction = 0; // facing right
+    localFrame++;
+    var _totalFrames = sprite_get_number(spriteattack);
+    var _frame       = floor(localFrame / (FRAME_RATE / (_totalFrames * image_speed)));
+    image_index      = min(_frame, _totalFrames - 1);
 
-        // Return to free state
-        state = playerstatefree;
-        image_index = 0;
+    if (image_index >= _totalFrames - 1) {
+        // fire arrow to the right
+        var _arrow       = instance_create_layer(x + 16, y, "instances", oarrow);
+        _arrow.direction = 0;
+
+        // reset
+        localFrame   = 0;
+        image_index  = 0;
+        image_speed  = 0;
         sprite_index = spriteidle;
+        state        = playerstatefree;
     }
 }

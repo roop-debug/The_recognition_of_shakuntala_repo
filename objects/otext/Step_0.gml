@@ -44,15 +44,16 @@ if (keyboard_check_pressed(vk_space)) {
             }
             exit;
         }
+        // NEW:
         instance_destroy();
         if (instance_exists(otextqueued)) {
             with (otextqueued) ticket--;
-        } else {
+        }
+        // always check after destroy — if nothing queued remains, end dialogue
+        if (!instance_exists(otext) && !instance_exists(otextqueued)) {
             if (instance_exists(oDialogueManager)) {
                 oDialogueManager.isActive = false;
                 with (oDialogueManager) endDialogue();
-            } else {
-                with (oPlayer_firsthalf) state = laststate;
             }
         }
     } else {

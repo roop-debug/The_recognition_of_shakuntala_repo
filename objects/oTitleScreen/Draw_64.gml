@@ -9,11 +9,11 @@ draw_set_valign(fa_middle);
 // Title
 draw_set_font(ftext);
 draw_set_color(c_white);
-draw_text(RESOLUTION_W / 2, RESOLUTION_H / 2 - 32, "The Recognition of Shakuntala");
+draw_text(RESOLUTION_W / 2, RESOLUTION_H / 2 - 32, "Abhijnana Shakuntalam");
 
-// Icon
+// Icon — shifted right
 var _iconW = sprite_get_width(sLifeIcon);
-draw_sprite(sLifeIcon, 0, RESOLUTION_W / 2 - _iconW / 2, RESOLUTION_H / 2 - 8);
+draw_sprite(sLifeIcon, 0, RESOLUTION_W / 2 - _iconW / 2 + 20, RESOLUTION_H / 2 - 8);
 
 // Prompt
 draw_set_font(smaller);

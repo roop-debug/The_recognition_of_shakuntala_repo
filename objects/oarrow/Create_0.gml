@@ -1,6 +1,4 @@
-// Arrow movement
-speed = 10;
-direction = 0;   // set when created
-
-// Optional lifetime (failsafe)
-life = 120; // frames (~2 seconds at 60fps)
+arrowSpeed = 4;
+direction  = 0;
+life       = 120;
+speed      = 0;

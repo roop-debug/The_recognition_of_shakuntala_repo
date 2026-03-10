@@ -1,5 +1,5 @@
 function newtextbox(){
-    show_debug_message("newtextbox called - isActive was: " + string(oDialogueManager.isActive));
+    
     if (instance_exists(oDialogueManager)) oDialogueManager.isActive = true;
     
     var _isNpc    = (argument_count > 3) ? argument[3] : false;

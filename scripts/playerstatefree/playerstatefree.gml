@@ -52,10 +52,10 @@ if(_oldsprite!= sprite_index){
    
 }
 
-if(keyAttack && instance_exists(oPlayer_firsthalf) && oPlayer_firsthalf.attackCooldown== 0){
-    state=playerstateattack ;
-    attackcooldown=20;
-}
+if (keyAttack) {
+        image_index = 0;
+        state       = playerstateattack;
+    }
 }
 
 

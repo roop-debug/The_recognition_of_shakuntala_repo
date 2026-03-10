@@ -134,8 +134,8 @@ global.dialogue[$ "duty3"] = [
 // ─── VIDUSHAKA ─────────────────────────────────────────────
 global.viduResponses = [
     { label: "Return for protection.",        next: "res1" },
-    { label: "Return for her.",               next: "res1" },
-    { label: "Return under official pretext.", next: "res1" }
+    { label: "Return for her.",               next: "res2" },
+    { label: "Return under official pretext.", next: "res3" }
 ];
 
 global.dialogue[$ "vidu1"] = [
@@ -154,9 +154,10 @@ global.dialogue[$ "vidu3"] = [
 ];
 
 global.dialogue[$ "res1"] = [
-    { speaker: "Vidushaka", text: "Ah! So duty now walks in two directions.", bg: 0, audio:VidusakaAct1D5  },
-    { speaker: "",          text: "Press T to return to the forest.", bg: 0, onEnd: "fadeToForest" }
+    { speaker: "Vidushaka", text: "Ah! So duty now walks in two directions.", bg: 0, audio:VidusakaAct1D5 ,onEnd: "fadeToForest" },
+    
 ];
+
 
 // ─── SHAKUNTALA MONOLOGUE ───────────────────────────────────
 global.dialogue[$ "shakmon_entry"] = [
@@ -429,10 +430,10 @@ global.dialogue[$ "farewell4"] = [
 // ─── 3. RIVER CROSSING — RING LOST ────────────────────────
 global.dialogue[$ "ring_lost"] = [
     {
-        speaker: "Shakuntala",
+        speaker: "!!!!",
         text: "The ring is gone.",
         bg: 0,
-        audio: shakuntala_act2_no5,
+        
         responses: [
             { label: "Panic openly.",                          next: "ring1" },
             { label: "Search frantically but silently.",       next: "ring2" },
@@ -443,23 +444,23 @@ global.dialogue[$ "ring_lost"] = [
 ];
 
 global.dialogue[$ "ring1"] = [
-    { speaker: "Shakuntala", text: "The ring, no...\nIt was here.\nIt cannot be gone!", bg: 0, audio: shakuntala_act2_no6 },
-    { speaker: "Shakuntala", text: "How could I be so careless?\nThis was the proof of everything.", bg: 0, audio: shakuntala_act2_no7, onEnd: "continueJourney" }
+    { speaker: "Shakuntala", text: "The ring, no...\nIt was here.\nIt cannot be gone!", bg: 0, audio: shakuntala_act2_no5 },
+    { speaker: "Shakuntala", text: "How could I be so careless?\nThis was the proof of everything.", bg: 0, audio: shakuntala_act2_no6}
 ];
 
 global.dialogue[$ "ring2"] = [
-    { speaker: "Shakuntala", text: "It must have fallen near the bank...\nI will find it.", bg: 0, audio: shakuntala_act2_no8 },
-    { speaker: "Shakuntala", text: "The current has taken it.", bg: 0, audio: shakuntala_act2_no9, onEnd: "continueJourney" }
+    { speaker: "Shakuntala", text: "It must have fallen near the bank...\nI will find it.", bg: 0, audio: shakuntala_act2_no7 },
+    { speaker: "Shakuntala", text: "The current has taken it.", bg: 0, audio: shakuntala_act2_no8 }
 ];
 
 global.dialogue[$ "ring3"] = [
-    { speaker: "Shakuntala", text: "It is only a token.\nWhat we vowed was real.", bg: 0, audio: shakuntala_act2_no10 },
-    { speaker: "Shakuntala", text: "Truth does not drown in water.", bg: 0, audio: shakuntala_act2_no11, onEnd: "continueJourney" }
+    { speaker: "Shakuntala", text: "It is only a token.\nWhat we vowed was real.", bg: 0, audio: shakuntala_act2_no9 },
+    { speaker: "Shakuntala", text: "Truth does not drown in water.", bg: 0, audio: shakuntala_act2_no10}
 ];
 
 global.dialogue[$ "ring4"] = [
-    { speaker: "Shakuntala", text: "The ring is gone...\nBut he will not need it.", bg: 0, audio: shakuntala_act2_no12 },
-    { speaker: "Shakuntala", text: "He will remember.", bg: 0, audio: shakuntala_act2_no13, onEnd: "continueJourney" }
+    { speaker: "Shakuntala", text: "The ring is gone...\nBut he will not need it.", bg: 0, audio: shakuntala_act2_no11},
+    { speaker: "Shakuntala", text: "He will remember.", bg: 0, audio: shakuntala_act2_no12 }
 ];
 
 // ─── 4. ARRIVAL AT THE CAPITAL ────────────────────────────
@@ -479,23 +480,23 @@ global.dialogue[$ "arrival"] = [
 ];
 
 global.dialogue[$ "arrival1"] = [
-    { speaker: "Shakuntala", text: "I am wife to King Dushyanta.\nAnnounce me.", bg: 0, audio: shakuntala_act2_no14 },
-    { speaker: "Guard",      text: "You will wait while we inform the court.", bg: 0, audio: GuardACT2D2, onEnd: "enterCourt" }
+    { speaker: "Shakuntala", text: "I am wife to King Dushyanta.\nAnnounce me.", bg: 0, audio: shakuntala_act2_no13 },
+    { speaker: "Guard",      text: "You will wait while we inform the court.", bg: 0, audio: GuardACT2D2 }
 ];
 
 global.dialogue[$ "arrival2"] = [
-    { speaker: "Shakuntala", text: "I request audience with the king\non a matter of personal bond.", bg: 0, audio: shakuntala_act2_no15 },
-    { speaker: "Guard",      text: "Very well. Remain here.", bg: 0, audio: GuardACT2D3, onEnd: "enterCourt" }
+    { speaker: "Shakuntala", text: "I request audience with the king\non a matter of personal bond.", bg: 0, audio: shakuntala_act2_no14 },
+    { speaker: "Guard",      text: "Very well. Remain here.", bg: 0, audio: GuardACT2D3 }
 ];
 
 global.dialogue[$ "arrival3"] = [
-    { speaker: "Shakuntala", text: "I come from Sage Kanva's hermitage.\nThe king once visited there.", bg: 0, audio: shakuntala_act2_no16 },
-    { speaker: "Guard",      text: "The court will decide if that warrants entry.", bg: 0, audio: GuardACT2D4, onEnd: "enterCourt" }
+    { speaker: "Shakuntala", text: "I come from Sage Kanva's hermitage.\nThe king once visited there.", bg: 0, audio: shakuntala_act2_no15 },
+    { speaker: "Guard",      text: "The court will decide if that warrants entry.", bg: 0, audio: GuardACT2D4}
 ];
 
 global.dialogue[$ "arrival4"] = [
-    { speaker: "Shakuntala", text: "The king will recognize me.\nInform him I have arrived.", bg: 0, audio: shakuntala_act2_no17 },
-    { speaker: "Guard",      text: "We shall see.", bg: 0, audio: GuardACT2D5, onEnd: "enterCourt" }
+    { speaker: "Shakuntala", text: "The king will recognize me.\nInform him I have arrived.", bg: 0, audio: shakuntala_act2_no16 },
+    { speaker: "Guard",      text: "We shall see.", bg: 0, audio: GuardACT2D5 }
 ];
 
 // ─── 5. COURT OF KING DUSHYANTA ───────────────────────────
@@ -516,22 +517,22 @@ global.dialogue[$ "court_entry"] = [
 ];
 
 global.dialogue[$ "court_act2_1"] = [
-    { speaker: "Shakuntala", text: "My lord...\nI stand before you as one joined to you in vow.", bg: 0, audio: shakuntala_act2_no18 },
+    { speaker: "Shakuntala", text: "My lord...\nI stand before you as one joined to you in vow.", bg: 0, audio: shakuntala_act2_no17},
     { speaker: "Dushyanta",  text: "You speak as though we share history.", bg: 0, audio: Court_of_king_Dushyanta_2, onEnd: "proofDemanded" }
 ];
 
 global.dialogue[$ "court_act2_2"] = [
-    { speaker: "Shakuntala", text: "Your Majesty,\nbefore sacred ground we pledged ourselves.", bg: 0, audio: shakuntala_act2_no19 },
+    { speaker: "Shakuntala", text: "Your Majesty,\nbefore sacred ground we pledged ourselves.", bg: 0, audio: shakuntala_act2_no18 },
     { speaker: "Dushyanta",  text: "I recall no such pledge.", bg: 0, audio: Court_of_king_Dushyanta_3, onEnd: "proofDemanded" }
 ];
 
 global.dialogue[$ "court_act2_3"] = [
-    { speaker: "Shakuntala", text: "I am your lawful wife,\nunited by mutual consent in the hermitage.", bg: 0, audio: shakuntala_act2_no20 },
+    { speaker: "Shakuntala", text: "I am your lawful wife,\nunited by mutual consent in the hermitage.", bg: 0, audio: shakuntala_act2_no19 },
     { speaker: "Dushyanta",  text: "Such a claim demands proof.", bg: 0, audio: Court_of_king_Dushyanta_4, onEnd: "proofDemanded" }
 ];
 
 global.dialogue[$ "court_act2_4"] = [
-    { speaker: "Shakuntala", text: "Do you not remember the grove?\nThe day you set aside your bow?", bg: 0, audio: shakuntala_act2_no21 },
+    { speaker: "Shakuntala", text: "Do you not remember the grove?\nThe day you set aside your bow?", bg: 0, audio: shakuntala_act2_no20 },
     { speaker: "Dushyanta",  text: "I remember no such intimacy.", bg: 0, audio: Court_of_king_Dushyanta_5, onEnd: "proofDemanded" }
 ];
 
@@ -552,22 +553,22 @@ global.dialogue[$ "proof_scene"] = [
 ];
 
 global.dialogue[$ "proof1"] = [
-    { speaker: "Shakuntala", text: "You gave me a ring bearing your seal.\nIt was lost upon the river.", bg: 0, audio: shakuntala_act2_no22 },
+    { speaker: "Shakuntala", text: "You gave me a ring bearing your seal.\nIt was lost upon the river.", bg: 0, audio: shakuntala_act2_no21 },
     { speaker: "Dushyanta",  text: "Convenient loss.", bg: 0, audio: Proof_demanded_2, onEnd: "finalRejection" }
 ];
 
 global.dialogue[$ "proof2"] = [
-    { speaker: "Shakuntala", text: "Search your own heart.\nWould I stand falsely before you?", bg: 0, audio: shakuntala_act2_no23 },
+    { speaker: "Shakuntala", text: "Search your own heart.\nWould I stand falsely before you?", bg: 0, audio: shakuntala_act2_no22 },
     { speaker: "Dushyanta",  text: "A king cannot rule by sentiment.", bg: 0, audio: Proof_demanded_3, onEnd: "finalRejection" }
 ];
 
 global.dialogue[$ "proof3"] = [
-    { speaker: "Shakuntala", text: "Whether you remember or not,\ntruth does not change.", bg: 0, audio: shakuntala_act2_no24 },
+    { speaker: "Shakuntala", text: "Whether you remember or not,\ntruth does not change.", bg: 0, audio: shakuntala_act2_no23 },
     { speaker: "Dushyanta",  text: "Conviction is not evidence.", bg: 0, audio: Proof_demanded_4, onEnd: "finalRejection" }
 ];
 
 global.dialogue[$ "proof4"] = [
-    { speaker: "Shakuntala", text: "You deny not me, but your own memory.", bg: 0, audio: shakuntala_act2_no25 },
+    { speaker: "Shakuntala", text: "You deny not me, but your own memory.", bg: 0, audio: shakuntala_act2_no24 },
     { speaker: "Dushyanta",  text: "I deny what cannot be proven.", bg: 0, audio: Proof_demanded_5, onEnd: "finalRejection" }
 ];
 
@@ -588,22 +589,23 @@ global.dialogue[$ "rejection_scene"] = [
 ];
 
 global.dialogue[$ "rejection1"] = [
-    { speaker: "Shakuntala", text: "To be forgotten is harsher than exile.", bg: 0, audio: shakuntala_act2_no26, onEnd: "escorted" }
+    { speaker: "Shakuntala", text: "To be forgotten is harsher than exile.", bg: 0, audio: shakuntala_act2_no25 }
+    ,{ speaker: "Dushyanta", text: "Escort her from the court.", bg: 0, audio: Final_rejection_2, onEnd: "act2End"}
 ];
 
 global.dialogue[$ "rejection2"] = [
-    { speaker: "Shakuntala", text: "I will not beg remembrance.", bg: 0, audio: shakuntala_act2_no27, onEnd: "escorted" }
+    { speaker: "Shakuntala", text: "I will not beg remembrance.", bg: 0, audio: shakuntala_act2_no26 }
+    ,{ speaker: "Dushyanta", text: "Escort her from the court.", bg: 0, audio: Final_rejection_2, onEnd: "act2End"}
 ];
 
 global.dialogue[$ "rejection3"] = [
-    { speaker: "Shakuntala", text: "Time will reveal what you refuse to see.", bg: 0, audio: shakuntala_act2_no28, onEnd: "escorted" }
+    { speaker: "Shakuntala", text: "Time will reveal what you refuse to see.", bg: 0, audio: shakuntala_act2_no27 }
+    ,{ speaker: "Dushyanta", text: "Escort her from the court.", bg: 0, audio: Final_rejection_2, onEnd: "act2End"}
 ];
 
 global.dialogue[$ "rejection4"] = [
-    { speaker: "Shakuntala", text: "Truth returns, even to those who reject it.", bg: 0, onEnd: "escorted" }
-];
+    { speaker: "Shakuntala", text: "Truth returns, even to those who reject it.", bg: 0, audio: shakuntala_act2_no28 }
 
-global.dialogue[$ "escorted_out"] = [
-    { speaker: "Dushyanta", text: "Escort her from the court.", bg: 0, audio: Final_rejection_2, onEnd: "act2End" }
+    ,{ speaker: "Dushyanta", text: "Escort her from the court.", bg: 0, audio: Final_rejection_2, onEnd: "act2End"}
 ];
 

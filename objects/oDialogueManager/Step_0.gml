@@ -16,3 +16,10 @@ if (friendsWalkTimer > 0) {
         startDialogue("gandharva");
     }
 }
+
+if (pendingEndCallback == "" && !isActive && activeChainKey == "act2End") {
+    activeChainKey = "";
+    if (!instance_exists(ofade)) {
+        instance_create_layer(0, 0, "Instances", ofade);
+    }
+}
