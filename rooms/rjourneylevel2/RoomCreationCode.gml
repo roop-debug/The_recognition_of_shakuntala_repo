@@ -4,3 +4,4 @@ with (oPlayer_shakuntalagame) {
     riverHitTimer = 0;
     
 }
+scrAmbience(snd);

@@ -1,1 +1,1 @@
-room_goto(rEndScreen);
+room_goto(rjungleact1secondhalf);
