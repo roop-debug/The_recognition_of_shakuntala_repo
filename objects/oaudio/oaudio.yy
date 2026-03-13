@@ -1,12 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"vidushakha_1",
+  "%Name":"oaudio",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"vidushakha_1",
+  "name":"oaudio",
   "overriddenProperties":[],
   "parent":{
     "name":"object",
@@ -30,10 +29,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"vidushakhamove",
-    "path":"sprites/vidushakhamove/vidushakhamove.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

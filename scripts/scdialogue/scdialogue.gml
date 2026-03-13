@@ -72,8 +72,52 @@ function handleEndCallback(flag) {
 
         case "hideAscetic":
             if (instance_exists(oascetic)) oascetic.visible = false;
+            with(oPlayer_firsthalf){
+                spriteidle= dushyantaunarmedplayer;
+            spriterun=dushyantaunarmedmove;   }
+            break;
+        case "approach_bold_cb":
+            with (oDialogueManager) {
+                beeApproachTarget = "beereveal1";
+                beeApproachActive = true;
+            }
+            with (oPlayer_firsthalf) {
+                laststate = playerstatefree;
+                state     = playerstatefree;
+            }
             break;
 
+        case "approach_respect_cb":
+            with (oDialogueManager) {
+                beeApproachTarget = "beereveal2";
+                beeApproachActive = true;
+            }
+            with (oPlayer_firsthalf) {
+                laststate = playerstatefree;
+                state     = playerstatefree;
+            }
+            break;
+
+        case "approach_observe_cb":
+            with (oDialogueManager) {
+                beeApproachTarget = "beereveal3";
+                beeApproachActive = true;
+            }
+            with (oPlayer_firsthalf) {
+                laststate = playerstatefree;
+                state     = playerstatefree;
+            }
+            break;
+       
+       case "beeComplete":
+            if (instance_exists(messenger)) {
+                messenger.beeSceneComplete = true;
+            }
+            with (oDialogueManager) {
+                beeRevealComplete = true;
+            }
+            break;
+        
         case "fadeToForest":
             with (vidushakha) { vidushakaState = "done"; }
             forestVisitCount++;

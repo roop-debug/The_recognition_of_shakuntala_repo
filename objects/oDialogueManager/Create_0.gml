@@ -10,6 +10,9 @@ activDialogueSound = -1;
 isActive = false;
 unlockPlayerTimer = 0;
 friendsWalkTimer = 0; 
+beeApproachTarget = "";   // which beereveal to fire
+beeApproachActive = false;
+beeRevealComplete = false;
 
 // Build all dialogue data
 global.dialogue = {};
@@ -35,7 +38,7 @@ global.dialogue[$ "hunting_start"] = [
 ];
 global.dialogue[$ "hunting1"] = [
     { speaker: "King Dushyanta", text: "You speak rightly.\nI will not disturb what seeks sanctuary.\nMy arrow returns to rest.", bg: 0, audio: Hunting_scene_1 },
-    { speaker: "Ascetic",        text: "Your restraint honors your crown.\nPower governed by dharma is true kingship.", bg: 0, audio: AsceticAct1D2}
+    { speaker: "Ascetic",        text: "Your restraint honors your crown.\nPower governed by dharma is true kingship.", bg: 0, audio: AsceticAct1D2,onEnd: "hideAscetic"}
       
 ];
 
@@ -43,7 +46,7 @@ global.dialogue[$ "hunting2"] = [
     { speaker: "King Dushyanta", text: "The hunt sharpens judgment and steadies the hand.\nIt is no idle sport but preparation for rule.\nYet I will not violate sacred refuge.", bg: 0, audio:Hunting_scene_2},
     { speaker: "Ascetic",        text: "Discipline is noble, but compassion is greater still.\nA king who knows when not to strike is feared and revered alike.", bg: 0, audio: AsceticAct1D3,
       responses: [{ label: "Lower Bow", next: "0" }] },
-    { speaker: "Ascetic",        text: "Enter then, not as hunter, but protector.", bg: 0, audio: AsceticAct1D4 }
+    { speaker: "Ascetic",        text: "Enter then, not as hunter, but protector.", bg: 0, audio: AsceticAct1D4 ,onEnd: "hideAscetic",onEnd: "hideAscetic"}
 ];
 
 global.dialogue[$ "hunting3"] = [
@@ -66,32 +69,45 @@ global.dialogue[$ "forest_start"] = [
 ]
 
 global.dialogue[$ "anareply"] = [
-    { speaker: "Anasuya",        text: "Even the vines respond to your care.\nNo wonder the forest thrives around you.", bg: 0, audio: AnasuyaACT1D1},
-    { speaker: "King Dushyanta", text: "(to himself): She stands like a forest deity,\nuntouched by courtly artifice.", bg: 0, audio:Bee_incident_reveal_1 },
+    { speaker: "Anasuya",        text: "Even the vines respond to your care.\nNo wonder the forest thrives around you.", bg: 0, audio: AnasuyaACT1D1 },
+    { speaker: "King Dushyanta", text: "(to himself): She stands like a forest deity,\nuntouched by courtly artifice.", bg: 0, audio: Bee_incident_reveal_1 },
     { speaker: "Shakuntala",     text: "(annoyed): This bee will not leave me!\nIt hums as though I were a blossom.", bg: 0, audio: shakuntala_act1_no1 },
-    { speaker: "Priyamvada",
-        text: "Then perhaps some unseen hero will defend you.", 
-        bg: 0, 
+    {
+        speaker: "Priyamvada",
+        text: "Then perhaps some unseen hero will defend you.",
+        bg: 0,
         audio: PriyamvadaACT1D2,
         responses: [
-            { label: "Step Forward Boldly", next: "beereveal1" },
-            { label: "Step Forward Respectfully", next: "beereveal2" },
-            {  label: "Observe Briefly", next: "beereveal3" }
-      ]}
+            { label: "Step Forward Boldly",       next: "approach_bold" },
+            { label: "Step Forward Respectfully", next: "approach_respect" },
+            { label: "Observe Briefly",           next: "approach_observe" }
+        ]
+    }
+];
+global.dialogue[$ "approach_bold"] = [
+    { speaker: "", text: " ", bg: 0, onEnd: "approach_bold_cb" }
+];
+
+global.dialogue[$ "approach_respect"] = [
+    { speaker: "", text: " ", bg: 0, onEnd: "approach_respect_cb" }
+];
+
+global.dialogue[$ "approach_observe"] = [
+    { speaker: "", text: " ", bg: 0, onEnd: "approach_observe_cb" }
 ];
 
 global.dialogue[$ "beereveal1"] = [
     { speaker: "King Dushyanta", text: "Fear not. Even a small threat deserves protection.\nThe bee is gone.", bg: 0, audio:Bee_incident_reveal_2 },
     { speaker: "Shakuntala",     text: "A king? Here?\nWe did not know we were being observed.", bg: 0, audio: shakuntala_act1_no2},
     { speaker: "Anasuya",        text: "(bowing): Forgive our informality, your majesty.", bg: 0, audio: AnasuyaACT1D2},
-    { speaker: "",               text: "The messenger is here for you.", bg: 0 }
+    { speaker: "",               text: "The messenger is here for you.", bg: 0, onEnd: "beeComplete" }
 ];
 
 global.dialogue[$ "beereveal2"] = [
     { speaker: "King Dushyanta", text: "Forgive the intrusion.\nI could not ignore distress, however small.\nThe bee will trouble you no longer.", bg: 0, audio: Bee_incident_reveal_3},
     { speaker: "Shakuntala",     text: "You show kindness beyond necessity.", bg: 0, audio:shakuntala_act1_no3 },
     { speaker: "Priyamvada",     text: "And she blushes beyond explanation.", bg: 0, audio: PriyamvadaACT1D3 },
-    { speaker: "",               text: "The messenger is here for you.", bg: 0 }
+    { speaker: "",               text: "The messenger is here for you.", bg: 0 , onEnd: "beeComplete"}
 ];
 
 global.dialogue[$ "beereveal3"] = [
@@ -99,7 +115,7 @@ global.dialogue[$ "beereveal3"] = [
     { speaker: "Shakuntala",     text: "You meant no harm?", bg: 0, audio:shakuntala_act1_no4 },
     { speaker: "King Dushyanta", text: "None. I was struck by the peace here.", bg: 0, audio: Bee_incident___reveal_5 },
     { speaker: "Anasuya",        text: "Then peace has found you as well.", bg: 0, audio: AnasuyaACT1D3 },
-    { speaker: "",               text: "The messenger is here for you.", bg: 0 }
+    { speaker: "",               text: "The messenger is here for you.", bg: 0 , onEnd: "beeComplete"}
 ];
 
 // ─── DUTY / DEPARTURE ──────────────────────────────────────
@@ -134,8 +150,8 @@ global.dialogue[$ "duty3"] = [
 // ─── VIDUSHAKA ─────────────────────────────────────────────
 global.viduResponses = [
     { label: "Return for protection.",        next: "res1" },
-    { label: "Return for her.",               next: "res2" },
-    { label: "Return under official pretext.", next: "res3" }
+    { label: "Return for her.",               next: "res1" },
+    { label: "Return under official pretext.", next: "res1" }
 ];
 
 global.dialogue[$ "vidu1"] = [

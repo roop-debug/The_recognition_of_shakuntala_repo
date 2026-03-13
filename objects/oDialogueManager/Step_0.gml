@@ -23,3 +23,11 @@ if (pendingEndCallback == "" && !isActive && activeChainKey == "act2End") {
         instance_create_layer(0, 0, "Instances", ofade);
     }
 }
+// Bee approach — wait for player to walk close to shakuntalanpc
+if (beeApproachActive && instance_exists(shakuntalanpc) && instance_exists(oPlayer_firsthalf)) {
+    var _dist = point_distance(oPlayer_firsthalf.x, oPlayer_firsthalf.y, shakuntalanpc.x, shakuntalanpc.y);
+    if (_dist < 32) {
+        beeApproachActive = false;
+        startDialogue(beeApproachTarget);
+    }
+}

@@ -93,6 +93,7 @@
     {"id":{"name":"oareatrigger","path":"objects/oareatrigger/oareatrigger.yy",},},
     {"id":{"name":"oarrow","path":"objects/oarrow/oarrow.yy",},},
     {"id":{"name":"oascetic","path":"objects/oascetic/oascetic.yy",},},
+    {"id":{"name":"oaudio","path":"objects/oaudio/oaudio.yy",},},
     {"id":{"name":"Object45","path":"objects/Object45/Object45.yy",},},
     {"id":{"name":"oCameraController","path":"objects/oCameraController/oCameraController.yy",},},
     {"id":{"name":"oCourtKing","path":"objects/oCourtKing/oCourtKing.yy",},},
@@ -323,7 +324,6 @@
     {"roomId":{"name":"rparent","path":"rooms/rparent/rparent.yy",},},
     {"roomId":{"name":"rjungleact1","path":"rooms/rjungleact1/rjungleact1.yy",},},
     {"roomId":{"name":"rcourt","path":"rooms/rcourt/rcourt.yy",},},
-    {"roomId":{"name":"rjungleact1secondhalf","path":"rooms/rjungleact1secondhalf/rjungleact1secondhalf.yy",},},
     {"roomId":{"name":"rjungleact2","path":"rooms/rjungleact2/rjungleact2.yy",},},
     {"roomId":{"name":"rjourneylevel1","path":"rooms/rjourneylevel1/rjourneylevel1.yy",},},
     {"roomId":{"name":"rjourneylevel2","path":"rooms/rjourneylevel2/rjourneylevel2.yy",},},
@@ -331,6 +331,7 @@
     {"roomId":{"name":"rcourtact2","path":"rooms/rcourtact2/rcourtact2.yy",},},
     {"roomId":{"name":"rtitle","path":"rooms/rtitle/rtitle.yy",},},
     {"roomId":{"name":"rEndScreen","path":"rooms/rEndScreen/rEndScreen.yy",},},
+    {"roomId":{"name":"rjungleact1secondhalf","path":"rooms/rjungleact1secondhalf/rjungleact1secondhalf.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

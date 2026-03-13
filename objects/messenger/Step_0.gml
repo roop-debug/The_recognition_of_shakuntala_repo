@@ -3,12 +3,12 @@ if(array_length(path)> 0){
 }
 
 switch (messengerState) {
-    case "waiting":
-    // wait for bee incident dialogue to fully finish
-    if (beeSceneComplete && instance_exists(oDialogueManager) && !oDialogueManager.isActive) {
-        messengerState = "walkin";
-    }
-    break;
+   case "waiting":
+        if (instance_exists(oDialogueManager) && oDialogueManager.beeRevealComplete) {
+            messengerState = "walkin";
+        }
+        break;
+    
     case "walkin":
         var _player = instance_exists(oPlayer_firsthalf) ? oPlayer_firsthalf : oPlayer_secondhalfnpc;
         if (instance_exists(_player)) {
