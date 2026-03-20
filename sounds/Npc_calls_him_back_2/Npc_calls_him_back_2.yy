@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"Npc_calls_him_back_2",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":6.442653,
+  "exportDir":"",
+  "name":"Npc_calls_him_back_2",
+  "parent":{
+    "name":"audio",
+    "path":"folders/audio.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"Npc_calls_him_back_2.mp3",
+  "volume":1.0,
+}

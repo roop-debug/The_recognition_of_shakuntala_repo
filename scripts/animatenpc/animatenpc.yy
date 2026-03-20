@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"animatenpc",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"animatenpc",
+  "parent":{
+    "name":"scripts",
+    "path":"folders/scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

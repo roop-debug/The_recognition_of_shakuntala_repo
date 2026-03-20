@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"KanvaAct2D4",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":3.993832,
+  "exportDir":"",
+  "name":"KanvaAct2D4",
+  "parent":{
+    "name":"audio",
+    "path":"folders/audio.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"KanvaAct2D4.mp3",
+  "volume":1.0,
+}
